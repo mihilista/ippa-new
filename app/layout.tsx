@@ -6,7 +6,7 @@ import Nav from "@/components/nav";
 import Footer from "@/components/footer";
 
 export const viewport: Viewport = {
-    themeColor: '#f5f5f5',
+    themeColor: '#ffffff',
 }
 
 export const metadata: Metadata = {
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     manifest: "/site.webmanifest",
     other: {
         "apple-mobile-web-app-title": "IPPA",
-        "msapplication-TileColor": "#fff",
+        "msapplication-TileColor": "#ffffff",
     },
     openGraph: {
         title: "IPPA",

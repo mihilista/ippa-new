@@ -44,7 +44,7 @@
 :root {
     --device-height: 100vh;
     --device-height: 100dvh;
-    --nav-height: 93px;
+    --nav-height: 69px;
 }
 
 @media (min-width: 768px) {
