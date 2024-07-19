@@ -5,7 +5,7 @@ export default function BlueBox({className, children}: {
     children: React.ReactNode
 }) {
     return (
-        <div className={clsx('bg-blue-600 py-16 px-20 rounded-[30px]', className)}>
+        <div className={clsx('bg-blue-600 p-20 rounded-[30px]', className)}>
             {children}
         </div>
     )

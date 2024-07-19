@@ -9,7 +9,7 @@ const config: Config = {
     theme: {
         extend: {
             fontFamily: {
-              sans: 'Montserrat, sans-serif'
+                sans: 'Montserrat, sans-serif'
             },
             colors: {
                 transparent: 'transparent',
@@ -18,7 +18,8 @@ const config: Config = {
                 black: '#1E1E1E',
                 blue: {
                     200: '#E9EFF1',
-                    600: '#454F9D'
+                    600: '#454F9D',
+                    700: '#313848',
                 },
                 gray: {
                     200: '#F0F1F3',

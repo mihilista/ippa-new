@@ -72,7 +72,7 @@ export default function RootLayout({
 
         <GlobalProvider>
             <Nav/>
-            <main className="relative flex flex-col w-full flex-1">
+            <main className="relative flex flex-col w-full flex-1 pt-nav pb-16">
                 {children}
             </main>
             <Footer/>

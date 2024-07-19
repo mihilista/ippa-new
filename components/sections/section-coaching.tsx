@@ -7,7 +7,7 @@ export default function SectionCoaching() {
     return (
         <Container className="flex flex-col gap-10">
             <div className="flex gap-20 justify-between">
-                <header className="flex-1 max-w-[400px] py-16">
+                <header className="flex-1 max-w-[400px] p-20">
                     <TypoTitle>
                         Koučovaní
                     </TypoTitle>

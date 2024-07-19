@@ -16,7 +16,7 @@ export default function Input({
     return (
         <div className="w-full flex flex-col gap-1">
             <label htmlFor={id} className={clsx('cursor-pointer', {
-                'text-white': !error,
+                'text-black': !error,
                 'text-orange-400': error
             })}>{label}</label>
             <input
