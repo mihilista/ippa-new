@@ -6,8 +6,8 @@ import BlueBox from "@/components/blue-box";
 export default function SectionTeambuilding() {
     return (
         <Container className="flex flex-col gap-10" id="teambuilding">
-            <BlueBox className="text-white flex flex-col gap-8">
-                <header>
+            <BlueBox className="text-white flex flex-col gap-6 md:gap-8">
+                <header className="text-center md:text-left">
                     <TypoTitle>
                         Teambuilding
                     </TypoTitle>

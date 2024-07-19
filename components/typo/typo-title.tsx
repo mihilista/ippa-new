@@ -6,7 +6,7 @@ export default function TypoTitle({Element = 'h2', children, className}: {
     children: React.ReactNode;
 }) {
     return (
-        <Element className={clsx('text-[48px] leading-[1.2] font-bold', className)}>
+        <Element className={clsx('text-[30px] leading-[1.2] md:text-[48px] md:leading-[1.2] font-bold', className)}>
             {children}
         </Element>
     )

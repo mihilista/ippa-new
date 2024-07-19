@@ -8,16 +8,16 @@ import {CONTACTS} from "@/helpers/data";
 
 export default function SectionContact() {
     return (
-        <Container className="flex gap-4" id="contact">
+        <Container className="flex flex-col lg:flex-row gap-4" id="contact">
             <div className="flex-1 flex flex-col justify-between">
-                <header className="p-20">
+                <header className="pb-12 lg:p-20 text-center lg:text-left">
                     <TypoTitle>
                         Kontakt
                     </TypoTitle>
                 </header>
 
                 <div className="flex flex-col gap-4">
-                    <div className="flex gap-4">
+                    <div className="flex flex-col md:flex-row gap-4">
                         <div
                             className="flex-1 bg-gray-200 rounded-[30px] px-5 py-6 text-[20px] leading-[1.4] flex flex-col items-center gap-5 text-center">
                             <a href={`mailto:${CONTACTS.emails.common}`}
@@ -45,7 +45,7 @@ export default function SectionContact() {
                     >
                         <Image src={imageMap}
                                alt="Mapa"
-                               className="w-full aspect-[750/326] object-cover border-[3px] border-blue-200 rounded-[30px]"
+                               className="w-full aspect-[360/326] lg:aspect-[750/326] object-cover border-[3px] border-blue-200 rounded-[30px]"
                         />
                     </a>
                 </div>

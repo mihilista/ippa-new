@@ -7,9 +7,9 @@ import imageHeader from "@/public/images/header.jpg";
 
 export default function SectionHeader() {
     return (
-        <Container className="flex items-start gap-14">
+        <Container className="flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-14">
             <div className="flex-1 relative">
-                <div className="absolute top-0 -right-8 w-full h-full rounded-[30px] bg-gray-200"/>
+                <div className="absolute top-0 -right-[5px] md:-right-8 w-[calc(100%+10px)] md:w-full h-full rounded-[30px] bg-gray-200"/>
                 <Image src={imageHeader}
                        alt=""
                        className="relative w-full aspect-square object-cover rounded-[30px]"
@@ -21,7 +21,7 @@ export default function SectionHeader() {
                         Institut psychologické a personální analýzy
                     </TypoJumbo>
                 </header>
-                <TypoBody>
+                <TypoBody className="text-gray-800">
                     Institut psychologické a personální analýzy (IPPA) byl založen v r.1993. Jeho původní dominantní
                     zaměření na executive search, headhunting a recruitment se během více jak dvacetileté existence a
                     působení rozšiřovalo o další odborné aktivity v oblasti personálně psychologického poradenství,

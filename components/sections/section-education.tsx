@@ -8,7 +8,7 @@ import Pill from "@/components/pill";
 export default function SectionEducation() {
     return (
         <Container id="education">
-            <BlueBox className="flex items-center gap-28">
+            <BlueBox className="flex flex-col md:flex-row items-center gap-12 md:gap-28">
                 <div className="flex-1 max-w-[515px] flex flex-col gap-8">
                     <header>
                         <TypoTitle className="text-white">
@@ -23,7 +23,7 @@ export default function SectionEducation() {
                     </TypoBody>
                 </div>
 
-                <div className="flex-1 grid grid-cols-2 gap-12 items-center">
+                <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     {EDUCATION_ITEMS.map((item, index) => (
                         <Pill key={`index`}>
                             {item}
