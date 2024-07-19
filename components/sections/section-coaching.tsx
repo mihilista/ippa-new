@@ -5,7 +5,7 @@ import {COACHING_ITEMS} from "@/helpers/coaching";
 
 export default function SectionCoaching() {
     return (
-        <Container className="flex flex-col gap-10">
+        <Container className="flex flex-col gap-10" id="coaching">
             <div className="flex gap-20 justify-between">
                 <header className="flex-1 max-w-[400px] p-20">
                     <TypoTitle>

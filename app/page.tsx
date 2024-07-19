@@ -12,7 +12,7 @@ export default function Home() {
             <SectionHeader/>
             <SectionEducation/>
             <SectionCoaching/>
-            <Container className="py-20">
+            <Container className="py-20" id="development-centrum">
                 <TypoTitle>development centrum</TypoTitle>
             </Container>
             <SectionTeambuilding/>

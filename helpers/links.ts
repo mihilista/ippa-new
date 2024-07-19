@@ -1,9 +1,9 @@
 export const NAV_LINKS = [
-    {href: '', label: 'Školení'},
-    {href: '', label: 'Koučování'},
-    {href: '', label: 'Development Centrum'},
-    {href: '', label: 'Teambuilding'},
-    {href: '', label: 'Kontakt'},
+    {href: '#education', label: 'Školení'},
+    {href: '#coaching', label: 'Koučování'},
+    {href: '#development-centrum', label: 'Development Centrum'},
+    {href: '#teambuilding', label: 'Teambuilding'},
+    {href: '#contact', label: 'Kontakt'},
     // terms & conditions
     // privacy policy
 ];

@@ -8,7 +8,7 @@ import {CONTACTS} from "@/helpers/data";
 
 export default function SectionContact() {
     return (
-        <Container className="flex gap-4">
+        <Container className="flex gap-4" id="contact">
             <div className="flex-1 flex flex-col justify-between">
                 <header className="p-20">
                     <TypoTitle>

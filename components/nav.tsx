@@ -1,5 +1,6 @@
 import Container from "@/components/container";
 import LogoLink from "@/components/logo-link";
+import MenuDesktop from "@/components/menu-desktop";
 
 
 export default function Nav() {
@@ -10,7 +11,7 @@ export default function Nav() {
             >
                 <LogoLink/>
 
-                {/*<MenuDesktop/>*/}
+                <MenuDesktop/>
 
                 {/*<BurgerButton/>*/}
             </Container>

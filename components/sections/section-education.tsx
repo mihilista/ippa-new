@@ -7,7 +7,7 @@ import Pill from "@/components/pill";
 
 export default function SectionEducation() {
     return (
-        <Container>
+        <Container id="education">
             <BlueBox className="flex items-center gap-28">
                 <div className="flex-1 max-w-[515px] flex flex-col gap-8">
                     <header>
