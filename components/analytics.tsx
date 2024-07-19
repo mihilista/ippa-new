@@ -1,6 +1,6 @@
 import Script from 'next/script';
 
-const GTM_CONTAINER_ID = 'GTM-KVF3GD2R';
+const GTM_CONTAINER_ID = 'GTM-KVX56XBZ';
 
 export default function Analytics() {
     return (
