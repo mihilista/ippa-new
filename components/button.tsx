@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 export default function Button({
                                    href,
-                                   theme = 'teal',
+                                   theme = 'black',
                                    children,
                                    className,
                                    ...rest

@@ -1,13 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-
-type ContainerProps = {
-    Element?: React.ElementType;
-    narrow?: boolean;
-    className?: string;
-    children?: React.ReactNode;
-    [rest: string]: any;
-};
+import {TContainer} from "@/helpers/types";
 
 export default function Container({
                                       Element = 'section',
@@ -15,7 +8,7 @@ export default function Container({
                                       className,
                                       children,
                                       ...rest
-                                  }: ContainerProps) {
+                                  }: TContainer) {
     return (
         <Element
             className={clsx(
