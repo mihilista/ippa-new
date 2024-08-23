@@ -3,28 +3,27 @@ import React, {createContext, useCallback, useContext, useMemo, useReducer} from
 
 interface State {
     burgerMenuActive: boolean;
-    fontSizesTimestamp: number | null;
+    scrollPosition: number;
 }
 
 export interface ContextState extends State {
     setBurgerMenuActive: () => void;
     setBurgerMenuInactive: () => void;
     toggleBurgerMenu: () => void;
-    setFontSizesTimestamp: () => void;
     state: State;
     dispatch: React.Dispatch<Action>;
 }
 
 interface Action {
     type: string;
-    payload?: string | null;
+    payload?: any;
 }
 
 const GlobalContext = createContext<ContextState | undefined>(undefined);
 
 const initialState: State = {
     burgerMenuActive: false,
-    fontSizesTimestamp: null,
+    scrollPosition: 0,
 };
 
 const globalReducer = (state: State, action: Action): State => {
@@ -32,7 +31,8 @@ const globalReducer = (state: State, action: Action): State => {
         case 'SET_BURGER_MENU_ACTIVE':
             return {
                 ...state,
-                burgerMenuActive: true
+                burgerMenuActive: true,
+                scrollPosition: action.payload // Store scroll position
             };
         case 'SET_BURGER_MENU_INACTIVE':
             return {
@@ -42,12 +42,8 @@ const globalReducer = (state: State, action: Action): State => {
         case 'TOGGLE_BURGER_MENU':
             return {
                 ...state,
-                burgerMenuActive: !state.burgerMenuActive
-            };
-        case 'SET_FONT_SIZES_TIMESTAMP':
-            return {
-                ...state,
-                fontSizesTimestamp: Date.now()
+                burgerMenuActive: !state.burgerMenuActive,
+                scrollPosition: action.payload ?? state.scrollPosition
             };
         default:
             console.error('Unhandled action type:', action.type);
@@ -55,40 +51,46 @@ const globalReducer = (state: State, action: Action): State => {
     }
 };
 
-export const GlobalProvider = ({children}: {
-    children: React.ReactNode
-}) => {
+export const GlobalProvider = ({children}: { children: React.ReactNode }) => {
     const [state, dispatch] = useReducer(globalReducer, initialState);
 
     const setBurgerMenuActive = useCallback(() => {
-        dispatch({type: 'SET_BURGER_MENU_ACTIVE'});
+        const scrollY = window.scrollY; // Capture scroll position
+        document.documentElement.classList.remove('scroll-smooth'); // Remove smooth scroll
+        document.body.style.top = `-${scrollY}px`;
+        document.body.style.position = 'fixed';
+        document.body.style.width = '100%';
+        dispatch({ type: 'SET_BURGER_MENU_ACTIVE', payload: scrollY });
     }, [dispatch]);
 
     const setBurgerMenuInactive = useCallback(() => {
-        dispatch({type: 'SET_BURGER_MENU_INACTIVE'});
-    }, [dispatch]);
+        document.body.style.position = '';
+        document.body.style.width = '';
+        document.body.style.top = '';
+        window.scrollTo(0, state.scrollPosition); // Restore scroll position
+        document.documentElement.classList.add('scroll-smooth'); // Re-add smooth scroll
+        dispatch({ type: 'SET_BURGER_MENU_INACTIVE' });
+    }, [dispatch, state.scrollPosition]);
 
     const toggleBurgerMenu = useCallback(() => {
-        dispatch({type: 'TOGGLE_BURGER_MENU'});
-    }, [dispatch]);
-
-    const setFontSizesTimestamp = useCallback(() => {
-        dispatch({type: 'SET_FONT_SIZES_TIMESTAMP'});
-    }, [dispatch]);
-
+        if (state.burgerMenuActive) {
+            setBurgerMenuInactive();
+        } else {
+            setBurgerMenuActive();
+        }
+    }, [state.burgerMenuActive, setBurgerMenuActive, setBurgerMenuInactive]);
 
     const contextValue = useMemo(() => {
         return {
             burgerMenuActive: state.burgerMenuActive,
-            fontSizesTimestamp: state.fontSizesTimestamp,
+            scrollPosition: state.scrollPosition, // Include scrollPosition here
             setBurgerMenuActive,
             setBurgerMenuInactive,
             toggleBurgerMenu,
-            setFontSizesTimestamp,
             state,
             dispatch
         };
-    }, [state, setBurgerMenuActive, setBurgerMenuInactive, toggleBurgerMenu, setFontSizesTimestamp]);
+    }, [state, setBurgerMenuActive, setBurgerMenuInactive, toggleBurgerMenu]);
 
     return <GlobalContext.Provider value={contextValue}>{children}</GlobalContext.Provider>;
 };

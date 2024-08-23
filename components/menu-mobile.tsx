@@ -14,7 +14,7 @@ export default function MenuMobile() {
             {NAV_LINKS.map((link, index) => (
                 <Link href={link.href}
                       key={`Nav Link: ${index}`}
-                      className=""
+                      className="text-lg"
                       onClick={setBurgerMenuInactive}
                 >
                     {link.label}

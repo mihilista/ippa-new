@@ -82,7 +82,7 @@ export default function ContactForm() {
             })}
                   onSubmit={handleSubmit}
             >
-                <Input label="Name"
+                <Input label="Jméno a příjmení"
                        id="cf-name"
                        name="name"
                        value={data.name}

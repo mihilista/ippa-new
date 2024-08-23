@@ -13,7 +13,7 @@ export default function BurgerButton() {
     }
 
     return (
-        <button className="lg:hidden relativd flex items-center justify-center w-[31px] h-[24px] relative border-0 outline-0"
+        <button className="lg:hidden flex items-center justify-center w-[31px] h-[24px] relative border-0 outline-0"
                 aria-label={burgerMenuActive ? 'Close menu' : 'Open menu'}
                 onClick={handleClick}
         >
