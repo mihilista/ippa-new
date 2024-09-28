@@ -56,7 +56,7 @@ export default function RootLayout({
     const isProduction = process.env.NODE_ENV === 'production';
 
     return (
-        <html lang="cs" className="scroll-smooth scroll-pt-nav bg-white text-black">
+        <html lang="cs" className="scroll-smooth scroll-pt-nav-extra bg-white text-black">
         <head>
             <link
                 rel="preload"

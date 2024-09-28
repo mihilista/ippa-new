@@ -13,11 +13,11 @@ export default function Nav() {
 
     return (
         <>
-            <nav className={clsx('text-black fixed top-0 left-0 w-full z-50 transition-all ', {
+            <nav className={clsx('text-black fixed top-0 left-0 w-full z-50 transition-all shadow-lg shadow-black/10', {
                 'bg-white/70 backdrop-blur text-black': !burgerMenuActive
             })}>
                 <Container Element="div"
-                           className="flex items-center justify-between py-3 md:py-6"
+                           className="flex items-center justify-between py-3 md:py-4"
                 >
                     <LogoLink/>
 

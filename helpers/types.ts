@@ -9,7 +9,7 @@ export type TContainer = {
 };
 
 export type TButton = {
-    theme?: 'black' | 'white';
+    theme?: 'blue';
     href?: string;
     className?: string;
     children?: React.ReactNode;
@@ -36,3 +36,10 @@ export type TFormBotProtectionInput = {
     value: string;
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
+
+export type TBox = {
+    theme?: 'blue' | 'gray';
+    className?: string;
+    children?: React.ReactNode;
+    [rest: string]: any;
+}

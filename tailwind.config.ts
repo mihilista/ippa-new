@@ -18,12 +18,15 @@ const config: Config = {
                 black: '#1E1E1E',
                 blue: {
                     200: '#E9EFF1',
+                    500: '#5963B3',
                     600: '#454F9D',
                     700: '#313848',
                 },
                 gray: {
                     200: '#F0F1F3',
                     300: '#EFEFEF',
+                    400: '#C1C3C8',
+                    500: '#898B8E',
                     800: '#1E1E1E'
                 }
             },
@@ -33,6 +36,7 @@ const config: Config = {
             spacing: {
                 device: 'var(--device-height)',
                 nav: 'var(--nav-height)',
+                'nav-extra': 'calc(var(--nav-height) + 50px)',
             }
         },
     },

@@ -1,11 +1,7 @@
 export const NAV_LINKS = [
-    {href: '#education', label: 'Školení'},
-    {href: '#coaching', label: 'Koučování'},
-    {href: '#development-centrum', label: 'Development Centrum'},
-    {href: '#teambuilding', label: 'Teambuilding'},
-    {href: '#contact', label: 'Kontakt'},
-    // terms & conditions
-    // privacy policy
+    { href: '#koucink', label: 'Co je koučink?' },
+    { href: '#ippa', label: 'IPPA' },
+    { href: '#kontakt', label: 'Kontakt' },
 ];
 
 export const FOOTER_LINKS = NAV_LINKS;

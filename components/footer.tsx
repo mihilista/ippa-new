@@ -2,57 +2,47 @@ import Container from "@/components/container";
 import Image from "next/image";
 
 import imageLogo from "@/public/images/logo-light.png";
-import {FOOTER_LINKS} from "@/helpers/links";
+import { FOOTER_LINKS } from "@/helpers/links";
 import Link from "next/link";
-import {CONTACTS} from "@/helpers/data";
+import { CONTACTS } from "@/helpers/data";
+import TypoBody from "./typo/typo-body";
 
 const currentYear = new Date().getFullYear();
 
 export default function Footer() {
 
     return (
-        <footer className="bg-blue-700">
+        <footer className="bg-blue-700 text-gray-400">
             <Container Element="div"
-                       className="py-10 px-20 flex flex-col gap-14"
+                className="py-10 px-20 flex flex-col gap-12 items-center text-center"
             >
-                <div className="flex flex-col md:flex-row items-center md:items-stretch gap-10 justify-between">
-                    <Image src={imageLogo} alt="IPPA"
-                           className="block w-20"
-                    />
+                <Image src={imageLogo} alt="IPPA"
+                    className="block w-20"
+                />
 
-                    <div className="flex flex-col md:flex-row gap-10 md:gap-32 text-center md:text-right">
-                        <div className="flex flex-col">
-                            <a href={`mailto:${CONTACTS.emails.common}`}
-                               className="text-white hover:underline">{CONTACTS.emails.common}</a>
-                            <a href={`tel:${CONTACTS.phone.split(' ').join('')}`}
-                               className="text-white/70 hover:underline">{CONTACTS.phone}</a>
-                            <a href={`mailto:${CONTACTS.emails.personal}`}
-                               className="text-white/70 hover:underline">{CONTACTS.emails.personal}</a>
-                        </div>
+                <TypoBody>
+                    Institut psychologické a personální analýzy (IPPA)<br />
+                    Váš partner pro osobní a profesní růst od roku 1993
+                </TypoBody>
 
-                        <div className="flex flex-col">
-                            <p className="text-white">Adresa</p>
-                            <address className="text-white/70 not-italic max-w-[25ch]">{CONTACTS.address}</address>
-                        </div>
-                    </div>
+                <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+                    {FOOTER_LINKS.map((link, index) => (
+                        <Link href={link.href} key={`Footer Link: ${index}`}
+                            className="text-white hover:underline"
+                        >
+                            {link.label}
+                        </Link>
+                    ))}
                 </div>
 
-                <div className="flex flex-col md:flex-row items-center justify-between gap-10">
-                    <div className="flex-1 flex flex-col md:flex-row items-center md:items-start gap-8">
-                        {FOOTER_LINKS.map((link, index) => (
-                            <Link href={link.href} key={`Footer Link: ${index}`}
-                                  className="text-white hover:underline"
-                            >
-                                {link.label}
-                            </Link>
-                        ))}
-                    </div>
-
-                    <div className="flex items-center gap-6">
-                        <Link href="/" className="text-white/70 hover:underline">Terms & Conditions</Link>
-                        <Link href="/" className="text-white/70 hover:underline">Privacy Policy</Link>
-                    </div>
+                <div className="flex items-center gap-10">
+                    <a href={`mailto:${CONTACTS.email}`}
+                        className="text-gray-400 hover:text-white">{CONTACTS.email}</a>
+                    <a href={`tel:${CONTACTS.phone.split(' ').join('')}`}
+                        className="text-gray-400 hover:text-white">{CONTACTS.phone}</a>
                 </div>
+
+
             </Container>
         </footer>
     )

@@ -1,57 +1,38 @@
 import Container from "@/components/container";
-import TypoTitle from "@/components/typo/typo-title";
-import Image from "next/image";
+import TypoSubtitle from "../typo/typo-subtitle";
+import TypoBody from "../typo/typo-body";
+import Box from "../box";
+import Button from "../button";
+import TypoTitle from "../typo/typo-title";
+import { CONTACTS } from "@/helpers/data";
 
-import imageMap from "@/public/images/map.png";
-import ContactForm from "@/components/form/contact-form";
-import {CONTACTS} from "@/helpers/data";
 
 export default function SectionContact() {
     return (
-        <Container className="flex flex-col lg:flex-row gap-4" id="contact">
-            <div className="flex-1 flex flex-col justify-between">
-                <header className="pb-12 lg:p-20 text-center lg:text-left">
-                    <TypoTitle>
-                        Kontakt
+        <Container className="flex flex-col lg:flex-row gap-12 items-center justify-between" id="kontakt">
+            <div className="flex flex-col gap-12 text-center lg:text-left">
+                <header>
+                    <TypoTitle Element="h2">
+                        Jste připraveni na změnu?
                     </TypoTitle>
                 </header>
-
-                <div className="flex flex-col gap-4">
-                    <div className="flex flex-col md:flex-row gap-4">
-                        <div
-                            className="flex-1 bg-gray-200 rounded-[30px] px-5 py-6 text-[20px] leading-[1.4] flex flex-col items-center gap-5 text-center">
-                            <a href={`mailto:${CONTACTS.emails.common}`}
-                               className="font-bold">{CONTACTS.emails.common}</a>
-
-                            <div className="flex flex-col">
-                                <a href={`tel:${CONTACTS.phone.split(' ').join('')}`}
-                                   className="hover:underline">{CONTACTS.phone}</a>
-                                <a href={`mailto:${CONTACTS.emails.personal}`}
-                                   className="hover:underline">{CONTACTS.emails.personal}</a>
-                            </div>
-                        </div>
-                        <div
-                            className="flex-1 bg-gray-200 rounded-[30px] px-10 py-6 text-[20px] leading-[1.4] flex flex-col items-center gap-5 text-center">
-                            <p className="font-bold">Adresa</p>
-                            <address>
-                                {CONTACTS.address}
-                            </address>
-                        </div>
-                    </div>
-
-                    <a href={CONTACTS.mapLink}
-                       target="_blank"
-                       rel="noreferrer noopener"
-                    >
-                        <Image src={imageMap}
-                               alt="Mapa"
-                               className="w-full aspect-[360/326] lg:aspect-[750/326] object-cover border-[3px] border-blue-200 rounded-[30px]"
-                        />
-                    </a>
-                </div>
+                <TypoBody className="text-gray-500 max-w-[50ch]">
+                    Objednejte si nezávaznou konzultaci a zjistěte, jak vám můžeme pomoci na vaší cestě k osobnímu růstu a úspěchu.
+                </TypoBody>
             </div>
-            <div className="flex-1 max-w-[610px] bg-blue-200 p-12 rounded-[30px]">
-                <ContactForm/>
+
+            <div className="">
+                <Box theme="gray" className="flex flex-col items-center gap-2">
+                    <a href={`mailto:${CONTACTS.email}`} className="font-bold hover:underline">{CONTACTS.email}</a>
+                    <a href={`tel:${CONTACTS.phone.split(' ').join('')}`} className="hover:underline">{CONTACTS.phone}</a>
+
+                    <TypoBody className="max-w-[30ch]">
+                        Palác Adria, Jungmannova 36
+                    </TypoBody>
+                    <Button className="text-nowrap mt-4">
+                        Objednejte si schůzku
+                    </Button>
+                </Box>
             </div>
         </Container>
     )

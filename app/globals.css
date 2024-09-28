@@ -5,9 +5,9 @@
 @font-face {
     font-family: 'Montserrat';
     src: url('/fonts/montserrat/Montserrat-Regular.woff2') format('woff2'),
-    url('/fonts/montserrat/Montserrat-Regular.woff') format('woff'),
-    url('/fonts/montserrat/Montserrat-Regular.ttf') format('truetype'),
-    url('/fonts/montserrat/Montserrat-Regular.otf') format('opentype');
+        url('/fonts/montserrat/Montserrat-Regular.woff') format('woff'),
+        url('/fonts/montserrat/Montserrat-Regular.ttf') format('truetype'),
+        url('/fonts/montserrat/Montserrat-Regular.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -16,9 +16,9 @@
 @font-face {
     font-family: 'Montserrat';
     src: url('/fonts/montserrat/Montserrat-Medium.woff2') format('woff2'),
-    url('/fonts/montserrat/Montserrat-Medium.woff') format('woff'),
-    url('/fonts/montserrat/Montserrat-Medium.ttf') format('truetype'),
-    url('/fonts/montserrat/Montserrat-Medium.otf') format('opentype');
+        url('/fonts/montserrat/Montserrat-Medium.woff') format('woff'),
+        url('/fonts/montserrat/Montserrat-Medium.ttf') format('truetype'),
+        url('/fonts/montserrat/Montserrat-Medium.otf') format('opentype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -27,9 +27,9 @@
 @font-face {
     font-family: 'Montserrat';
     src: url('/fonts/montserrat/Montserrat-Bold.woff2') format('woff2'),
-    url('/fonts/montserrat/Montserrat-Bold.woff') format('woff'),
-    url('/fonts/montserrat/Montserrat-Bold.ttf') format('truetype'),
-    url('/fonts/montserrat/Montserrat-Bold.otf') format('opentype');
+        url('/fonts/montserrat/Montserrat-Bold.woff') format('woff'),
+        url('/fonts/montserrat/Montserrat-Bold.ttf') format('truetype'),
+        url('/fonts/montserrat/Montserrat-Bold.otf') format('opentype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -49,12 +49,28 @@
 
 @media (min-width: 768px) {
     :root {
-        --nav-height: 93px;
+        --nav-height: 88px;
     }
 }
 
 body {
     @apply font-sans antialiased;
-    @apply selection:bg-teal-400 selection:text-white;
+    @apply selection:bg-blue-600 selection:text-white;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+}
+
+.bg-blue-600 {
+    @apply selection:bg-white selection:text-blue-600;
+}
+
+.button {
+    @apply inline-flex justify-center items-center;
+    @apply py-4 px-14 rounded-full;
+    @apply font-bold;
+    @apply transition-all duration-300;
+}
+
+.button-blue {
+    @apply bg-blue-600 text-white;
+    @apply hover:bg-blue-500;
 }
