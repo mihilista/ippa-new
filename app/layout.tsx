@@ -1,7 +1,7 @@
-import type {Metadata, Viewport} from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Analytics from "@/components/analytics";
-import {GlobalProvider} from "@/context/global-context";
+import { GlobalProvider } from "@/context/global-context";
 import Nav from "@/components/nav";
 import Footer from "@/components/footer";
 
@@ -10,8 +10,8 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-    metadataBase: new URL('https://ippa.cz/'),
-    title: "IPPA",
+    metadataBase: new URL('https://www.ippa.cz/'),
+    title: "IPPA - Institut psychologické a personální analýzy",
     description: "",
     applicationName: "IPPA",
     icons: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
         "msapplication-TileColor": "#ffffff",
     },
     openGraph: {
-        title: "IPPA",
+        title: "IPPA - Institut psychologické a personální analýzy",
         siteName: "IPPA",
         url: "/",
         description: "",
@@ -49,35 +49,35 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-                                       children,
-                                   }: Readonly<{
+    children,
+}: Readonly<{
     children: React.ReactNode;
 }>) {
     const isProduction = process.env.NODE_ENV === 'production';
 
     return (
         <html lang="cs" className="scroll-smooth scroll-pt-nav-extra bg-white text-black">
-        <head>
-            <link
-                rel="preload"
-                href="/fonts/dmsans/DMSans-Regular.woff2"
-                as="font"
-                type="font/woff2"
-                crossOrigin="anonymous"
-            />
-        </head>
-        <body className="flex flex-col min-h-device">
+            <head>
+                <link
+                    rel="preload"
+                    href="/fonts/dmsans/DMSans-Regular.woff2"
+                    as="font"
+                    type="font/woff2"
+                    crossOrigin="anonymous"
+                />
+            </head>
+            <body className="flex flex-col min-h-device">
 
-        {isProduction && <Analytics/>}
+                {isProduction && <Analytics />}
 
-        <GlobalProvider>
-            <Nav/>
-            <main className="relative flex flex-col w-full flex-1 pt-nav pb-16">
-                {children}
-            </main>
-            <Footer/>
-        </GlobalProvider>
-        </body>
+                <GlobalProvider>
+                    <Nav />
+                    <main className="relative flex flex-col w-full flex-1 pt-nav pb-16">
+                        {children}
+                    </main>
+                    <Footer />
+                </GlobalProvider>
+            </body>
         </html>
     );
 }
