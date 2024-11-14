@@ -32,8 +32,10 @@ export default function SectionHeader() {
                     autoPlay={false}
                     loop={false}
                     poster={imageHeader.src}
+                    aria-label="Inspirativní video o odemknutí plného potenciálu pomocí psychologického koučinku."
                 >
                     <source src="/videos/header.mp4" type="video/mp4" />
+                    Váš prohlížeč nepodporuje video tag. Zde je <a href="/videos/header.mp4">odkaz na video</a>.
                 </video>
             </div>
         </Container>
