@@ -4,7 +4,7 @@ import TypoBody from "@/components/typo/typo-body";
 import Image from "next/image";
 
 import imageHeader from "@/public/images/header.jpg";
-import Button from "../button";
+import Button from "@/components/button";
 
 export default function SectionHeader() {
     return (
@@ -24,10 +24,19 @@ export default function SectionHeader() {
             </div>
             <div className="flex-1 relative">
                 <div className="absolute top-0 -left-[5px] md:-left-8 w-[calc(100%+10px)] md:w-full h-full rounded-[30px] bg-gray-200" />
-                <Image src={imageHeader}
+                {/* <Image src={imageHeader}
                     alt=""
                     className="relative w-full h-full object-cover rounded-[30px]"
-                />
+                /> */}
+
+                <video className="relative w-full h-full object-cover rounded-[30px]"
+                    controls
+                    autoPlay={false}
+                    loop={false}
+                    poster={imageHeader.src}
+                >
+                    <source src="/videos/header.mp4" type="video/mp4" />
+                </video>
             </div>
         </Container>
     )
