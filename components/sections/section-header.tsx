@@ -1,8 +1,6 @@
 import Container from "@/components/container";
 import TypoJumbo from "@/components/typo/typo-jumbo";
 import TypoBody from "@/components/typo/typo-body";
-import Image from "next/image";
-
 import imageHeader from "@/public/images/header.jpg";
 import Button from "@/components/button";
 
