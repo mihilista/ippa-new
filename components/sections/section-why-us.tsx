@@ -27,13 +27,13 @@ export default function SectionWhyUs() {
                         <TypoBody className="relative max-w-[58ch] mx-auto my-8 lg:my-0">
                             <SvgQuotes className="absolute w-[28px] -top-8 -left-4 md:-top-8 md:-left-8 pointer-events-none" />
                             <SvgQuotes className="absolute w-[28px] -bottom-8 -right-4 md:-bottom-8 md:-right-8 rotate-180 pointer-events-none" />
-                            Institut psychologické a personální analýzy (IPPA) má více než 20 let zkušeností v oblasti osobního a profesního rozvoje. Naše práce spočívá v kombinaci osvědčených metod a individuálního přístupu ke každému klientovi. Rozumíme vašim potřebám a jsme zde, abychom vám pomohli překonat výzvy, které vám brání v dosažení plného potenciálu.
+                            Institut psychologické a personální analýzy (IPPA) má více než 20 let zkušeností s podporou osobního a profesního růstu. Kombinujeme osvědčené metody s individuálním přístupem, abychom vám pomohli překonat výzvy, které vás brzdí na cestě k plnému potenciálu.
                         </TypoBody>
                     </Box>
 
                     <Box theme="blue">
                         <TypoBody className="mx-auto max-w-[58ch]">
-                            Naše odborné kompetence zahrnují široké spektrum odvětví, jako je automobilový a spotřební průmysl, bankovní sektor, IT a telekomunikace. S námi získáte partnera, který vás bude provázet na vaší cestě ke změně.
+                            Máme rozsáhlé zkušenosti s rozvojem jednotlivců napříč různými oblastmi, včetně automobilového a spotřebního průmyslu, bankovnictví, finančních služeb, IT a telekomunikací. S námi získáte odborného partnera, který rozumí vašim potřebám a pomůže vám naplno využít váš potenciál.
                         </TypoBody>
                     </Box>
                 </div>

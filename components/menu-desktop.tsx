@@ -17,7 +17,7 @@ export default function MenuDesktop() {
             </div>
 
             <Button href="#kontakt">
-                Objednejte si schůzku
+                Domluvte si schůzku
             </Button>
         </div>
     )

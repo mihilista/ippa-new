@@ -13,11 +13,11 @@ export default function SectionContact() {
             <div className="flex flex-col gap-12 text-center lg:text-left">
                 <header>
                     <TypoTitle Element="h2">
-                        Jste připraveni na změnu?
+                        Připraveni na změnu?
                     </TypoTitle>
                 </header>
                 <TypoBody className="text-gray-500 max-w-[50ch]">
-                    Objednejte si nezávaznou konzultaci a zjistěte, jak vám můžeme pomoci na vaší cestě k osobnímu růstu a úspěchu.
+                    Domluvte si úvodní konzultaci a zjistěte, jak vám můžeme pomoci na vaší cestě k osobnímu růstu a úspěchu.
                 </TypoBody>
             </div>
 
@@ -27,10 +27,10 @@ export default function SectionContact() {
                     <a href={`tel:${CONTACTS.phone.split(' ').join('')}`} className="hover:underline">{CONTACTS.phone}</a>
 
                     <TypoBody className="max-w-[30ch]">
-                        Palác Adria, Jungmannova 36
+                        Praha - Čertouská 353/8
                     </TypoBody>
                     <Button className="text-nowrap mt-4">
-                        Objednejte si schůzku
+                        Domluvte si schůzku
                     </Button>
                 </Box>
             </div>

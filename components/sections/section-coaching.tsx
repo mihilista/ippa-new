@@ -15,7 +15,7 @@ export default function SectionCoaching() {
                 </header>
                 <div className="flex-1 max-w-[820px] bg-blue-200 rounded-[30px] p-8 md:p-12 text-center md:text-left">
                     <TypoBody>
-                        Koučink je dynamický proces osobního a profesního růstu, který vám pomůže překonat překážky, které vás brzdí v dosažení vašich cílů a pocitu spokojenosti. Identifikujeme a pochopíme to, co vám brání v cestě vpřed, a společně najdeme způsoby, jak se těchto bariér zbavit. Pomůžeme vám zaměřit se na to podstatné, změnit způsob myšlení a získat novou energii pro další kroky ve vašem životě.
+                        Koučink je proces osobního a profesního růstu, který vám pomůže překonat překážky na cestě k vašim cílům a pocitu spokojenosti. Společně odhalíme, co vás brzdí, a najdeme řešení, jak tyto bariéry odstranit. Pomůžeme vám zaměřit se na to důležité, změnit způsob myšlení a získat energii pro další kroky ve vašem životě.
                     </TypoBody>
                 </div>
             </div>
@@ -35,7 +35,7 @@ export default function SectionCoaching() {
                     ))}
                 </div>
                 <TypoBody className="text-gray-500 text-center max-md:max-w-[28ch]">
-                    Jste připraveni na změnu? My vám pomůžeme najít cestu.
+                    Jste připraveni na změnu? Pomůžeme vám najít cestu.
                 </TypoBody>
             </div>
         </Container>

@@ -1,6 +1,6 @@
 export const COACHING_ITEMS = [
-    'Zvýšení sebevědomí a zvládání stresu',
-    'Překonání obav a pochybností',
-    'Zlepšení schopnosti činit rozhodnutí a vidět alternativy',
-    'Nalezení smyslu a nové motivace pro váš život'
+    'Zvýšit sebevědomí a zvládat stres',
+    'Překonat obavy a pochybnosti',
+    'Rozvíjet schopnost rozhodování a vidět alternativy',
+    'Najít smysl a novou motivaci'
 ];

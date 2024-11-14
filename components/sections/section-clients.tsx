@@ -16,7 +16,7 @@ export default function SectionClients() {
             </header>
 
             <TypoBody className="text-center max-w-[70ch] text-gray-500">
-                Za více než dvě desetiletí jsme pomohli nespočtu jednotlivců i firem překonat výzvy a dosáhnout jejich cílů. Naše spolupráce přináší reálné výsledky – lepší pracovní výkony, zvýšenou spokojenost a osobní růst. Společně jsme spolupracovali s předními firmami v různých odvětvích, včetně automobilového průmyslu, bankovnictví a IT. Pomůžeme i vám.
+                Za více než dvě desetiletí jsme pomohli mnoha jednotlivcům a firmám překonat výzvy a dosáhnout svých cílů. Naše spolupráce přináší skutečné výsledky - vyšší pracovní výkon, zvýšenou spokojenost a osobní růst. S námi se můžete posunout k úspěchu i vy.
             </TypoBody>
 
             <Image src={imageClients} alt="Naši klienti" className="block max-w-full" />

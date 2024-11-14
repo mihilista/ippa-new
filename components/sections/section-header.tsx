@@ -10,14 +10,14 @@ export default function SectionHeader() {
             <div className="flex-1 flex flex-col gap-10 py-10">
                 <header>
                     <TypoJumbo className="max-w-[21ch]">
-                        Odhalte svůj plný potenciál s profesionálním koučinkem od IPPA
+                        Odemkněte svůj plný potenciál!
                     </TypoJumbo>
                 </header>
                 <TypoBody className="text-gray-800 max-w-[45ch]">
-                    Pomáháme lidem dosáhnout jejich osobních i profesních cílů a žít naplněný život. Jste připraveni na změnu?
+                    Dopřejte si koučink od zkušeného psychologa, který vám pomůže překonat bariéry a posunout se k naplněnému životu i kariéře. Jste připraveni na změnu?
                 </TypoBody>
                 <Button className="self-start">
-                    Objednejte si schůzku
+                    Domluvte si schůzku
                 </Button>
             </div>
             <div className="flex-1 relative">
