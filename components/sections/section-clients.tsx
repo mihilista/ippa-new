@@ -1,6 +1,6 @@
 import Container from "@/components/container";
-import TypoSubtitle from "../typo/typo-subtitle";
-import TypoBody from "../typo/typo-body";
+import TypoSubtitle from "@/components/typo/typo-subtitle";
+import TypoBody from "@/components/typo/typo-body";
 import Image from "next/image";
 
 import imageClients from "@/public/images/clients.png";

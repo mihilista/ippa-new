@@ -5,9 +5,9 @@ export const DEFAULT_FORM_DATA = {
     gender: ''
 };
 
-export const CONTACTS = {
-    email: 'info@ippa.cz',
-    phone: '+420 602 205 036',
-    address: 'Palác Adria, Jungmannova 36 vchod A, 3. patro',
-    mapLink: 'https://maps.app.goo.gl/CQmzhMxfv1bE8fig6'
-}
+export const CONTACT_EMAIL = 'info@ippa.cz';
+export const CONTACT_EMAIL_LINK = `mailto:${CONTACT_EMAIL}`;
+export const CONTACT_PHONE = '+420 602 205 036';
+export const CONTACT_PHONE_LINK = `tel:${CONTACT_PHONE.split(' ').join('')}`;
+export const CONTACT_ADDRESS = 'Praha - Čertouská 353/8';
+export const CONTACT_MAP_LINK = 'https://maps.app.goo.gl/CQmzhMxfv1bE8fig6';

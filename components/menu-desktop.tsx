@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { NAV_LINKS } from "@/helpers/links";
-import Button from "./button";
+import CtaButton from "@/components/cta-button";
 
 export default function MenuDesktop() {
     return (
@@ -16,9 +16,7 @@ export default function MenuDesktop() {
                 ))}
             </div>
 
-            <Button href="#kontakt">
-                Domluvte si schůzku
-            </Button>
+            <CtaButton />
         </div>
     )
 }

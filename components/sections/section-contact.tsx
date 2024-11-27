@@ -1,10 +1,9 @@
 import Container from "@/components/container";
-import TypoSubtitle from "../typo/typo-subtitle";
-import TypoBody from "../typo/typo-body";
-import Box from "../box";
-import Button from "../button";
-import TypoTitle from "../typo/typo-title";
-import { CONTACTS } from "@/helpers/data";
+import TypoBody from "@/components/typo/typo-body";
+import Box from "@/components/box";
+import TypoTitle from "@/components/typo/typo-title";
+import { CONTACT_ADDRESS, CONTACT_EMAIL, CONTACT_EMAIL_LINK, CONTACT_MAP_LINK, CONTACT_PHONE, CONTACT_PHONE_LINK } from "@/helpers/data";
+import CtaButton from "@/components/cta-button";
 
 
 export default function SectionContact() {
@@ -21,19 +20,23 @@ export default function SectionContact() {
                 </TypoBody>
             </div>
 
-            <div className="">
-                <Box theme="gray" className="flex flex-col items-center gap-2">
-                    <a href={`mailto:${CONTACTS.email}`} className="font-bold hover:underline">{CONTACTS.email}</a>
-                    <a href={`tel:${CONTACTS.phone.split(' ').join('')}`} className="hover:underline">{CONTACTS.phone}</a>
+            <Box theme="gray" className="flex flex-col items-center gap-2">
+                <TypoBody Element="a" href={CONTACT_EMAIL_LINK} className="font-bold hover:underline">{CONTACT_EMAIL}</TypoBody>
+                <TypoBody Element="a" href={CONTACT_PHONE_LINK} className="hover:underline">{CONTACT_PHONE}</TypoBody>
 
-                    <TypoBody className="max-w-[30ch]">
-                        Praha - Čertouská 353/8
-                    </TypoBody>
-                    <Button className="text-nowrap mt-4">
-                        Domluvte si schůzku
-                    </Button>
-                </Box>
-            </div>
+                <TypoBody
+                    Element="a"
+                    href={CONTACT_MAP_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="max-w-[30ch] hover:underline gtm-find-location"
+                >
+                    {CONTACT_ADDRESS}
+                </TypoBody>
+
+                <CtaButton className="text-nowrap mt-4" />
+            </Box>
+
         </Container>
     )
 }

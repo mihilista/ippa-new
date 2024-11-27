@@ -1,13 +1,12 @@
-import Container from "@/components/container";
+import { CONTACT_EMAIL, CONTACT_EMAIL_LINK, CONTACT_PHONE, CONTACT_PHONE_LINK } from "@/helpers/data";
 import Image from "next/image";
-
+import Link from "next/link";
+import Container from "@/components/container";
+import TypoBody from "@/components/typo/typo-body";
 import imageLogo from "@/public/images/logo-light.png";
 import { FOOTER_LINKS } from "@/helpers/links";
-import Link from "next/link";
-import { CONTACTS } from "@/helpers/data";
-import TypoBody from "./typo/typo-body";
 
-const currentYear = new Date().getFullYear();
+// const currentYear = new Date().getFullYear();
 
 export default function Footer() {
 
@@ -36,10 +35,10 @@ export default function Footer() {
                 </div>
 
                 <div className="flex items-center gap-10">
-                    <a href={`mailto:${CONTACTS.email}`}
-                        className="text-gray-400 hover:text-white">{CONTACTS.email}</a>
-                    <a href={`tel:${CONTACTS.phone.split(' ').join('')}`}
-                        className="text-gray-400 hover:text-white">{CONTACTS.phone}</a>
+                    <a href={CONTACT_EMAIL_LINK}
+                        className="text-gray-400 hover:text-white">{CONTACT_EMAIL}</a>
+                    <a href={CONTACT_PHONE_LINK}
+                        className="text-gray-400 hover:text-white">{CONTACT_PHONE}</a>
                 </div>
 
 

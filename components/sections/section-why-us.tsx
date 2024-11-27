@@ -1,10 +1,10 @@
 import Container from "@/components/container";
 import TypoTitle from "@/components/typo/typo-title";
-import Box from "../box";
+import Box from "@/components/box";
 import imagePerson from "@/public/images/why-us.jpg";
 import Image from "next/image";
-import SvgQuotes from "../svg/svg-quotes";
-import TypoBody from "../typo/typo-body";
+import SvgQuotes from "@/components/svg/svg-quotes";
+import TypoBody from "@/components/typo/typo-body";
 
 export default function SectionWhyUs() {
     return (

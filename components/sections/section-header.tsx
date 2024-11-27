@@ -2,7 +2,7 @@ import Container from "@/components/container";
 import TypoJumbo from "@/components/typo/typo-jumbo";
 import TypoBody from "@/components/typo/typo-body";
 import imageHeader from "@/public/images/header.jpg";
-import Button from "@/components/button";
+import CtaButton from "@/components/cta-button";
 
 export default function SectionHeader() {
     return (
@@ -16,9 +16,7 @@ export default function SectionHeader() {
                 <TypoBody className="text-gray-800 max-w-[45ch]">
                     Dopřejte si koučink od zkušeného psychologa, který vám pomůže překonat bariéry a posunout se k naplněnému životu i kariéře. Jste připraveni na změnu?
                 </TypoBody>
-                <Button className="self-start">
-                    Domluvte si schůzku
-                </Button>
+                <CtaButton className="self-start" />
             </div>
             <div className="flex-1 relative">
                 <div className="absolute top-0 -left-[5px] md:-left-8 w-[calc(100%+10px)] md:w-full h-full rounded-[30px] bg-gray-200" />

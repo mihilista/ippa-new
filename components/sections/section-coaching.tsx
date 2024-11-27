@@ -2,7 +2,7 @@ import Container from "@/components/container";
 import TypoTitle from "@/components/typo/typo-title";
 import TypoBody from "@/components/typo/typo-body";
 import { COACHING_ITEMS } from "@/helpers/coaching";
-import TypoSubtitle from "../typo/typo-subtitle";
+import TypoSubtitle from "@/components/typo/typo-subtitle";
 
 export default function SectionCoaching() {
     return (
