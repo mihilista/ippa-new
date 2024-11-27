@@ -6,7 +6,7 @@ export default function CtaButton({ className }: {
     className?: string
 }) {
     return (
-        <Button href={CONTACT_PHONE_LINK} className={clsx('gtm-cta-click', className)}>
+        <Button href={CONTACT_PHONE_LINK} className={clsx('gtm-contact', className)}>
             Domluvte si schůzku
         </Button>
     )

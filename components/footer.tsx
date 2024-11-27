@@ -36,9 +36,9 @@ export default function Footer() {
 
                 <div className="flex items-center gap-10">
                     <a href={CONTACT_EMAIL_LINK}
-                        className="text-gray-400 hover:text-white">{CONTACT_EMAIL}</a>
+                        className="text-gray-400 hover:text-white gtm-contact">{CONTACT_EMAIL}</a>
                     <a href={CONTACT_PHONE_LINK}
-                        className="text-gray-400 hover:text-white">{CONTACT_PHONE}</a>
+                        className="text-gray-400 hover:text-white gtm-contact">{CONTACT_PHONE}</a>
                 </div>
 
 

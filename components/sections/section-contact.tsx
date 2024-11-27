@@ -21,8 +21,8 @@ export default function SectionContact() {
             </div>
 
             <Box theme="gray" className="flex flex-col items-center gap-2">
-                <TypoBody Element="a" href={CONTACT_EMAIL_LINK} className="font-bold hover:underline">{CONTACT_EMAIL}</TypoBody>
-                <TypoBody Element="a" href={CONTACT_PHONE_LINK} className="hover:underline">{CONTACT_PHONE}</TypoBody>
+                <TypoBody Element="a" href={CONTACT_EMAIL_LINK} className="font-bold hover:underline gtm-contact">{CONTACT_EMAIL}</TypoBody>
+                <TypoBody Element="a" href={CONTACT_PHONE_LINK} className="hover:underline gtm-contact">{CONTACT_PHONE}</TypoBody>
 
                 <TypoBody
                     Element="a"
