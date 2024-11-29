@@ -5,6 +5,7 @@ import Container from "@/components/container";
 import TypoBody from "@/components/typo/typo-body";
 import imageLogo from "@/public/images/logo-light.png";
 import { FOOTER_LINKS } from "@/helpers/links";
+import SvgLogo from "./svg/svg-logo";
 
 // const currentYear = new Date().getFullYear();
 
@@ -15,9 +16,7 @@ export default function Footer() {
             <Container Element="div"
                 className="py-10 px-20 flex flex-col gap-12 items-center text-center"
             >
-                <Image src={imageLogo} alt="IPPA"
-                    className="block w-20"
-                />
+                <SvgLogo className="text-blue-400 w-20" />
 
                 <TypoBody>
                     Institut psychologické a personální analýzy (IPPA)<br />
