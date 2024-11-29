@@ -11,9 +11,9 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-    metadataBase: new URL('https://www.ippa.cz/'),
+    metadataBase: new URL('https://koucink.ippa.cz/'),
     title: "IPPA - Institut psychologické a personální analýzy",
-    description: "",
+    description: "Dopřejte si koučink od zkušeného psychologa, který vám pomůže překonat bariéry a posunout se k naplněnému životu i kariéře. Jste připraveni na změnu?",
     applicationName: "IPPA",
     icons: [
         {
@@ -35,11 +35,11 @@ export const metadata: Metadata = {
     openGraph: {
         title: "IPPA - Institut psychologické a personální analýzy",
         siteName: "IPPA",
-        url: "/",
-        description: "",
+        url: "https://koucink.ippa.cz/",
+        description: "Dopřejte si koučink od zkušeného psychologa, který vám pomůže překonat bariéry a posunout se k naplněnému životu i kariéře. Jste připraveni na změnu?",
         type: "website",
         images: [{
-            url: "/images/og-image.png",
+            url: "/images/og-image.jpg",
         }]
     },
 };
