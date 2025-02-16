@@ -6,7 +6,7 @@ export default function TypoSubtitle({Element = 'h3', children, className}: {
     children: React.ReactNode;
 }) {
     return (
-        <Element className={clsx('text-[20px] leading-[1.2] md:text-[30px] md:leading-[1.2] font-bold', className)}>
+        <Element className={clsx('text-xl leading-[1.2] md:text-3xl md:leading-[1.2] font-bold', className)}>
             {children}
         </Element>
     )

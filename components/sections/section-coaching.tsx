@@ -29,8 +29,8 @@ export default function SectionCoaching() {
                         <div key={`Coaching Item: ${index}`}
                             className="flex-1 w-full max-md:max-w-[265px] bg-gray-200 rounded-[30px] py-12 px-6 font-bold flex flex-col items-center gap-6 text-center"
                         >
-                            <div className="bg-blue-600 text-white w-12 h-12 inline-flex items-center justify-center rounded-full text-[20px] leading-[1.4]">{index + 1}</div>
-                            <p className="text-[20px] leading-[1.4]">{item}</p>
+                            <div className="bg-blue-600 text-white w-12 h-12 inline-flex items-center justify-center rounded-full text-xl leading-[1.4]">{index + 1}</div>
+                            <p className="text-xl leading-[1.4]">{item}</p>
                         </div>
                     ))}
                 </div>

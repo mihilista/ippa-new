@@ -33,6 +33,10 @@ const config: Config = {
             },
             fontSize: {
                 0: ['0', '0'],
+                'lg': ['1.125rem', '1'], // 18px
+                'xl': ['1.25rem', '1'], // 20px
+                '3xl': ['1.875rem', '1'], // 30px
+                '5xl': ['3rem', '1'], // 48px
             },
             spacing: {
                 device: 'var(--device-height)',
