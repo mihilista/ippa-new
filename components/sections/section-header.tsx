@@ -1,7 +1,7 @@
 import Container from "@/components/container";
 import TypoJumbo from "@/components/typo/typo-jumbo";
 import TypoBody from "@/components/typo/typo-body";
-import imageHeader from "@/public/images/header.jpg";
+import imagePoster from "@/public/images/poster.jpg";
 import CtaButton from "@/components/cta-button";
 
 export default function SectionHeader() {
@@ -22,16 +22,12 @@ export default function SectionHeader() {
             </div>
             <div className="flex-1 relative">
                 <div className="absolute top-0 -left-[5px] md:-left-8 w-[calc(100%+10px)] md:w-full h-full rounded-[30px] bg-gray-200" />
-                {/* <Image src={imageHeader}
-                    alt=""
-                    className="relative w-full h-full object-cover rounded-[30px]"
-                /> */}
 
                 <video className="relative w-full h-full object-cover rounded-[30px]"
                     controls
                     autoPlay={false}
                     loop={false}
-                    poster={imageHeader.src}
+                    poster={imagePoster.src}
                     aria-label="Inspirativní video o odemknutí plného potenciálu pomocí psychologického koučinku."
                 >
                     <source src="/videos/header.mp4" type="video/mp4" />
