@@ -15,6 +15,8 @@ export default function SectionHeader() {
                 </header>
                 <TypoBody className="text-gray-800 max-w-[45ch]">
                     Dopřejte si koučink od zkušeného psychologa, který vám pomůže překonat bariéry a posunout se k naplněnému životu i kariéře. Jste připraveni na změnu?
+                    <br /><br />
+                    <strong>Pomůžeme vám znovu se nadechnout a nadchnout.</strong>
                 </TypoBody>
                 <CtaButton className="self-start" />
             </div>
