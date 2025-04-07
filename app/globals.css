@@ -95,3 +95,7 @@ body {
 .legal-page ul {
     @apply list-disc list-inside;
 }
+
+.legal-page section a {
+    @apply underline text-blue-600 hover:no-underline;
+}
