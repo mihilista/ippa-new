@@ -57,10 +57,6 @@ export default function GDPRPage() {
                 <p>Zpracování vašich osobních údajů je založeno na:</p>
                 <ul>
                     <li>
-                        <strong>Plnění smlouvy</strong> nebo provedení opatření před uzavřením
-                        smlouvy na vaši žádost
-                    </li>
-                    <li>
                         <strong>Oprávněném zájmu</strong> správce na poskytování kvalitních
                         služeb a komunikaci s klienty
                     </li>
