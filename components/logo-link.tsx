@@ -1,24 +1,18 @@
 'use client'
 import Link from "next/link";
-import Image from "next/image";
-
-import imageLogo from "@/public/images/logo.png";
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import SvgLogo from "./svg/svg-logo";
+import { scrollToTop } from '@/helpers/utils';
 
 export default function LogoLink() {
     const pathname = usePathname();
-    const router = useRouter();
 
     const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-        e.preventDefault();
-
         if (pathname === '/') {
-            document.documentElement.scrollIntoView({ behavior: 'smooth' });
-        } else {
-            router.push('/');
-        }
-    };
+            e.preventDefault();
+            scrollToTop();
+        };
+    }
 
     return (
         <Link href="/"
@@ -26,10 +20,6 @@ export default function LogoLink() {
             onClick={handleLogoClick}
         >
             <SvgLogo />
-            {/* <Image src={imageLogo}
-                alt="IPPA"
-                className="block"
-            /> */}
         </Link>
     )
 }

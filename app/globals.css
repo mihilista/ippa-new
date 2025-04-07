@@ -74,3 +74,24 @@ body {
     @apply bg-blue-600 text-white;
     @apply hover:bg-blue-500;
 }
+
+.legal-page {
+    @apply flex flex-col gap-10;
+}
+
+.legal-page h1 {
+    @apply text-3xl leading-[1.2] md:text-5xl md:leading-[1.2] font-bold text-center;
+}
+
+.legal-page h2 {
+    @apply text-xl leading-[1.2] md:text-3xl md:leading-[1.2] font-bold text-blue-600;
+}
+
+.legal-page section {
+    @apply w-full max-w-[900px] mx-auto;
+    @apply flex flex-col gap-5;
+}
+
+.legal-page ul {
+    @apply list-disc list-inside;
+}
