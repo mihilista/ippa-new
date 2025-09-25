@@ -63,6 +63,10 @@ body {
     @apply selection:bg-white selection:text-blue-600;
 }
 
+label[for] {
+    @apply cursor-pointer;
+}
+
 .button {
     @apply inline-flex justify-center items-center;
     @apply py-4 px-14 rounded-full;
@@ -98,4 +102,48 @@ body {
 
 .legal-page section a {
     @apply underline text-blue-600 hover:no-underline;
+}
+
+/* Inputs */
+.input {
+    @apply rounded-[15px] outline-0 bg-transparent w-full border-2 border-blue-600/40;
+    @apply flex px-2.5 py-3.5;
+    @apply text-black;
+    @apply focus:border-blue-600;
+    @apply transition-colors duration-300;
+}
+
+.input--textarea {
+    @apply min-h-[125px];
+}
+
+.input-with-error {
+    @apply border-error focus:border-error;
+}
+
+.input-label {
+    @apply absolute top-4 left-4;
+    @apply text-black/70 -tracking-[0.01em];
+    @apply transition-all duration-300;
+}
+
+.input-label--error {
+    @apply text-error;
+}
+
+.input-label--active {
+    @apply opacity-0;
+}
+
+.input--checkbox {
+    @apply relative w-full flex gap-4 items-center text-[14px];
+}
+
+.input--checkbox a {
+    @apply underline hover:no-underline;
+}
+
+.fake-checkbox {
+    @apply flex items-center justify-center rounded-none;
+    @apply w-4 h-4 shrink-0 p-0 text-blue-600 border-blue-600;
 }

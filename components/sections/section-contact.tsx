@@ -1,23 +1,27 @@
-import Container from "@/components/container";
-import TypoBody from "@/components/typo/typo-body";
 import Box from "@/components/box";
+
+import Container from "@/components/container";
+import CtaButton from "@/components/cta-button";
+import ContactForm from '@/components/form/contact-form';
+import TypoBody from "@/components/typo/typo-body";
 import TypoTitle from "@/components/typo/typo-title";
 import { CONTACT_ADDRESS, CONTACT_EMAIL, CONTACT_EMAIL_LINK, CONTACT_MAP_LINK, CONTACT_PHONE, CONTACT_PHONE_LINK } from "@/helpers/data";
-import CtaButton from "@/components/cta-button";
 
 
 export default function SectionContact() {
     return (
         <Container className="flex flex-col lg:flex-row gap-12 items-center justify-between" id="kontakt">
-            <div className="flex flex-col gap-12 text-center lg:text-left">
-                <header>
+            <div className="flex flex-col gap-12">
+                <header className="text-center lg:text-left">
                     <TypoTitle Element="h2">
                         Připraveni na změnu?
                     </TypoTitle>
                 </header>
-                <TypoBody className="text-gray-500 max-w-[50ch]">
+                <TypoBody className="text-gray-500 max-w-[50ch] text-center lg:text-left">
                     Domluvte si úvodní konzultaci a zjistěte, jak vám můžeme pomoci na vaší cestě k osobnímu růstu a úspěchu.
                 </TypoBody>
+
+                <ContactForm />
             </div>
 
             <Box theme="gray" className="flex flex-col items-center gap-2">

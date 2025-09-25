@@ -16,6 +16,7 @@ const config: Config = {
                 current: 'currentColor',
                 white: '#ffffff',
                 black: '#1E1E1E',
+                error: '#FF4D4F',
                 blue: {
                     200: '#E9EFF1',
                     400: '#b0ccfd',

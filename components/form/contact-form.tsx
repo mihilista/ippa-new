@@ -1,20 +1,25 @@
 'use client';
 
-import Input from "@/components/input";
-import React, {useCallback, useEffect, useState} from "react";
-import {DEFAULT_FORM_DATA} from "@/helpers/data";
 import Button from "@/components/button";
+import Checkbox from '@/components/checkbox';
 import FormBotProtectionInput from "@/components/form/form-bot-protection-input";
+import Input from "@/components/input";
+import { validateEmail } from '@/helpers/validation';
 import clsx from "clsx";
+import Link from 'next/link';
+import React, { useCallback, useEffect, useState } from "react";
 
-const validateEmail = (email: string) => {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
-}
+export const DEFAULT_DATA = {
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+    agree: false,
+    gender: ''
+};
 
 export default function ContactForm() {
-    const [data, setData] = useState(DEFAULT_FORM_DATA);
-
+    const [data, setData] = useState(DEFAULT_DATA);
     const [status, setStatus] = useState('');
     const [errorField, setErrorField] = useState('');
 
@@ -26,6 +31,17 @@ export default function ContactForm() {
         setData({
             ...data,
             [e.target.name]: e.target.value
+        });
+    }, [data, errorField]);
+
+    const handleCheckboxChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+        if (errorField === e.target.name && e.target.checked) {
+            setErrorField('');
+        }
+
+        setData({
+            ...data,
+            [e.target.name]: e.target.checked
         });
     }, [data, errorField]);
 
@@ -43,6 +59,9 @@ export default function ContactForm() {
         } else if (data.email === '' || !validateEmail(data.email)) {
             setErrorField('email');
             return;
+        } else if (data.phone === '') {
+            setErrorField('phone');
+            return;
         } else if (data.message === '') {
             setErrorField('message');
             return;
@@ -52,13 +71,19 @@ export default function ContactForm() {
 
         const res = await fetch('/api/send-email', {
             method: 'POST',
-            headers: {'Content-Type': 'application/json'},
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data),
         });
 
         if (res.status === 200) {
             setStatus('success');
-            setData(DEFAULT_FORM_DATA);
+            setData(DEFAULT_DATA);
+
+            // Trigger the custom event for GTM
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                event: 'lead'
+            });
         } else {
             setStatus('error');
         }
@@ -80,42 +105,59 @@ export default function ContactForm() {
             <form className={clsx('w-full flex flex-col gap-4 transition-all duration-500', {
                 'opacity-0 pointer-events-none': status === 'success'
             })}
-                  onSubmit={handleSubmit}
+                onSubmit={handleSubmit}
             >
                 <Input label="Jméno a příjmení"
-                       id="cf-name"
-                       name="name"
-                       value={data.name}
-                       onChange={handleInputChange}
-                       error={errorField === 'name'}
+                    id="cf-name"
+                    name="name"
+                    value={data.name}
+                    onChange={handleInputChange}
+                    error={errorField === 'name'}
                 />
 
                 <Input label="E-mail"
-                       id="cf-email"
-                       name="email"
-                       value={data.email}
-                       onChange={handleInputChange}
-                       error={errorField === 'email'}
+                    id="cf-email"
+                    name="email"
+                    value={data.email}
+                    onChange={handleInputChange}
+                    error={errorField === 'email'}
                 />
 
-                <Input label="Message"
-                       type="textarea"
-                       id="cf-message"
-                       name="message"
-                       value={data.message}
-                       onChange={handleInputChange}
-                       error={errorField === 'message'}
+                <Input label="Telefon"
+                    id="cf-phone"
+                    name="phone"
+                    value={data.phone}
+                    onChange={handleInputChange}
+                    error={errorField === 'phone'}
+                />
+
+                <Input label="S čím vám můžeme pomoci? (volitelné)"
+                    type="textarea"
+                    id="cf-message"
+                    name="message"
+                    value={data.message}
+                    onChange={handleInputChange}
+                    error={errorField === 'message'}
                 />
 
                 {/* Hidden input for bot protection */}
                 <FormBotProtectionInput value={data.gender}
-                                        onChange={handleInputChange}
+                    onChange={handleInputChange}
                 />
 
-                <Button className={clsx('')}
-                        disabled={status === 'sending'}
+                <Checkbox name="agree"
+                    id="cf-agree"
+                    checked={data.agree === true}
+                    onChange={handleCheckboxChange}
+                    error={errorField === 'agree'}
                 >
-                    {status === 'sending' ? 'Sending...' : 'Submit'}
+                    Souhlasím se <Link href="/gdpr" target="_blank" className="underline hover:no-underline">zpracováním osobních údajů</Link>.
+                </Checkbox>
+
+                <Button className={clsx('')}
+                    disabled={status === 'sending'}
+                >
+                    {status === 'sending' ? 'Odesílám...' : 'Odeslat'}
                 </Button>
             </form>
 
@@ -123,8 +165,8 @@ export default function ContactForm() {
                 className={clsx('absolute top-0 left-0 w-full h-full flex items-center justify-center p-8 text-center transition-all duration-500', {
                     'opacity-0 pointer-events-none': status !== 'success'
                 })}>
-                <p className="max-w-[20ch]">
-                    Thank you, I will get back to you soon!
+                <p className="text-xl leading-[1.2] font-bold text-blue-600 max-w-[24ch]">
+                    Děkujeme za váš zájem! Ozveme se vám co nejdříve.
                 </p>
             </div>
         </div>
