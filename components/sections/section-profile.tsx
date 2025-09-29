@@ -34,7 +34,7 @@ export default function SectionProfile() {
             <GlowBall className="w-[190vw] md:w-[52%] aspect-square -top-40 md:-top-50 -left-[25%] md:-left-[10%]" />
 
             <div className="relative flex flex-col md:flex-row items-start md:items-center gap-8 lg:gap-32">
-                <div className="flex-grow md:max-w-[445px] max-md:-ml-8">
+                <div className="w-full md:flex-1 max-md:-ml-8">
                     <Image
                         src={imageOtakarChaloupka}
                         alt="PhDr. Otakar Chaloupka, CSc."
@@ -42,7 +42,7 @@ export default function SectionProfile() {
                     />
                 </div>
 
-                <div className="flex-grow max-w-[364px] flex flex-col gap-8">
+                <div className="md:flex-1 max-w-[364px] flex flex-col gap-8">
                     <header>
                         <EyebrowBlock
                             eyebrow="Profil"

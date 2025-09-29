@@ -5,7 +5,9 @@ import { FEATURE_ITEMS, FeatureItem } from '@/helpers/features';
 
 export default function SectionFeatures() {
     return (
-        <Container as="section"
+        <Container
+            as="section"
+            narrow
             className="relative"
         >
             <GlowBall className="md:hidden left-0 top-20 w-[190vw] aspect-square" />
