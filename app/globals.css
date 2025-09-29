@@ -129,7 +129,9 @@
     }
 
     .desktop-menu-link {
+        @apply text-o1 uppercase;
         @apply hover:underline;
+
     }
 
     .mobile-menu-link {}

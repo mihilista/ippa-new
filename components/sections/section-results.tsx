@@ -28,7 +28,7 @@ export default function SectionResults() {
 function ResultsItemCol({ icon, title, description, info }: ResultItem) {
     return (
         <div className="flex-1 flex flex-col items-center text-center">
-            <div className="w-full max-w-[212px] aspect-square bg-white/10 mb-5">
+            <div className="w-full max-w-[212px] aspect-square mb-5 text-blue-400">
                 {icon}
             </div>
 

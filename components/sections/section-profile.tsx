@@ -1,6 +1,8 @@
 import Container from '@/components/container';
 import EyebrowBlock from '@/components/eyebrow-block';
 import GlowBall from '@/components/glow-ball';
+import imageOtakarChaloupka from '@/public/images/otakar-chaloupka.jpg';
+import Image from 'next/image';
 
 type ProfileRow = {
     tag: string;
@@ -28,8 +30,12 @@ export default function SectionProfile() {
             <GlowBall className="w-[52%] aspect-square -top-50 -left-[10%]" />
 
             <div className="relative flex items-center gap-32">
-                <div className="flex-grow aspect-[445/544] max-w-[445px] bg-white/10 rounded-[25px]">
-
+                <div className="flex-grow max-w-[445px]">
+                    <Image
+                        src={imageOtakarChaloupka}
+                        alt="PhDr. Otakar Chaloupka, CSc."
+                        className="w-full rounded-[25px]"
+                    />
                 </div>
 
                 <div className="flex-grow max-w-[364px] flex flex-col gap-8">

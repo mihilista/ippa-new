@@ -5,7 +5,15 @@ export type LinkProps = {
 
 export const NAV_LINKS: LinkProps[] = [
     {
-        href: '#home',
-        label: 'Domů',
+        href: '#process',
+        label: 'O procesu',
+    },
+    {
+        href: '#profile',
+        label: 'Profil',
+    },
+    {
+        href: '#contact',
+        label: 'Kontakt',
     }
 ];

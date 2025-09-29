@@ -1,5 +1,5 @@
-import React from "react";
 import clsx from "clsx";
+import React from "react";
 
 type ButtonProps = {
     theme?: 'primary' | 'secondary';
@@ -20,6 +20,7 @@ export default function Button({
 }: ButtonProps) {
     const classes = clsx('button', {
         'button--primary': theme === 'primary',
+        'button--secondary': theme === 'secondary',
         'opacity-50 cursor-not-allowed': disabled,
     }, className);
 

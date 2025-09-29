@@ -30,7 +30,7 @@ export default function SectionFeatures() {
 function FeatureItemBox({ icon, description }: FeatureItem) {
     return (
         <div className="flex items-center gap-5 p-5 bg-black/10 border border-blue-400/20 rounded-[25px]">
-            <div className="w-14.5 h-14.5 bg-white/10 shrink-0">{icon}</div>
+            <div className="w-14.5 h-14.5 shrink-0">{icon}</div>
 
             <p className="text-b2">{description}</p>
         </div>

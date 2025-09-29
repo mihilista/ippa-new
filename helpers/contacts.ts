@@ -1,7 +1,7 @@
 import { LinkProps } from '@/helpers/links';
 
-export const CONTACT_EMAIL = '';
-export const CONTACT_PHONE = '';
+export const CONTACT_EMAIL = 'info@ippa.cz';
+export const CONTACT_PHONE = '+420 602 205 036';
 
 export const CONTACT_EMAIL_LINK = `mailto:${CONTACT_EMAIL}`;
 export const CONTACT_PHONE_LINK = `tel:${CONTACT_PHONE.replace(/\s/g, '')}`;
