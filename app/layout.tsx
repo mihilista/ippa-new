@@ -51,7 +51,6 @@ export default function RootLayout({
                     </main>
                     <Footer />
                 </GlobalProvider>
-
             </body>
         </html>
     );
