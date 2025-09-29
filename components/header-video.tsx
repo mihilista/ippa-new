@@ -72,6 +72,7 @@ export default function HeaderVideo() {
                     })}
                     onPause={handlePause}
                     controls
+                    playsInline
                 />
             </div>
         </div>
