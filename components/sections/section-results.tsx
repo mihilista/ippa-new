@@ -1,25 +1,30 @@
 import Container from '@/components/container';
 import EyebrowBlock from '@/components/eyebrow-block';
+import GlowBall from '@/components/glow-ball';
 import { RESULT_ITEMS, ResultItem } from '@/helpers/results';
 
 export default function SectionResults() {
     return (
         <Container narrow className="relative">
-            <header className="mb-24">
-                <EyebrowBlock
-                    eyebrow="Bilance"
-                    title="Výsledky v číslech"
-                    className="max-w-[200px]"
-                />
-            </header>
+            <GlowBall className="md:hidden left-0 top-260 w-[190vw] aspect-square" />
 
-            <div className="w-full flex flex-col md:flex-row md:justify-between gap-24 md:gap-10">
-                {RESULT_ITEMS.map((item, index) => (
-                    <ResultsItemCol
-                        key={`Results Item: ${index}`}
-                        {...item}
+            <div className="relative">
+                <header className="mb-24">
+                    <EyebrowBlock
+                        eyebrow="Bilance"
+                        title="Výsledky v číslech"
+                        className="max-w-[200px]"
                     />
-                ))}
+                </header>
+
+                <div className="w-full flex flex-col items-center lg:items-start lg:flex-row lg:justify-between gap-24 lg:gap-10">
+                    {RESULT_ITEMS.map((item, index) => (
+                        <ResultsItemCol
+                            key={`Results Item: ${index}`}
+                            {...item}
+                        />
+                    ))}
+                </div>
             </div>
         </Container>
     );
@@ -37,7 +42,7 @@ function ResultsItemCol({ icon, title, description, info }: ResultItem) {
                     {title}
                 </strong>
 
-                <div className="text-b2 text-balance">
+                <div className="text-b2 text-balance max-w-[30ch]">
                     {description}
                 </div>
 

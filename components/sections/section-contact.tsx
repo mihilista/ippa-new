@@ -17,7 +17,7 @@ export default function SectionContact() {
                 />
             </header>
 
-            <div className="flex-grow">
+            <div className="flex-grow w-full">
                 <ContactForm />
             </div>
         </Container>

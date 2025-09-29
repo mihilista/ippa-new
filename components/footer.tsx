@@ -10,11 +10,11 @@ import { CONTACT_EMAIL, CONTACT_EMAIL_LINK, CONTACT_PHONE, CONTACT_PHONE_LINK } 
 export default function Footer() {
 
     return (
-        <footer className="w-screen overflow-hidden pt-[80vw] -mt-[80vw]">
+        <footer className="w-screen overflow-hidden pt-[190vw] md:pt-[80vw] -mt-[190vw] md:-mt-[80vw]">
             <Container as="footer"
                 className="relative"
             >
-                <GlowBall className="bottom-20 left-[30%] w-[80vw] max-w-[1300px] aspect-square" />
+                <GlowBall className="bottom-150 md:bottom-20 -left-[90%] md:left-[30%] w-[190vw] md:w-[80vw] md:max-w-[1300px] aspect-square" />
                 <div className="relative flex flex-col items-center">
                     <div className="w-full flex flex-col items-center gap-14">
                         <LogoLink className="w-[143px]" />

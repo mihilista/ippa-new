@@ -13,7 +13,7 @@ export default function SectionPeople() {
     return (
         <Container
             narrow
-            className="flex flex-col md:flex-row items-start gap-17"
+            className="flex flex-col md:flex-row items-start gap-17 md:gap-5 lg:gap-17"
         >
             <header className="flex-grow max-w-[397px]">
                 <EyebrowBlock

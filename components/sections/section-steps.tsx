@@ -11,9 +11,9 @@ export default function SectionSteps() {
             id="process"
             className="relative"
         >
-            <GlowBall className="w-[90%] aspect-square top-50 left-[40%]" />
+            <GlowBall className="w-[190vw] md:w-[90%] aspect-square top-140 md:top-50 -left-[80%] md:left-[40%]" />
 
-            <div className="relative flex flex-col md:flex-row items-end md:items-start gap-8 md:gap-5">
+            <div className="relative flex flex-col md:flex-row md:items-start gap-8 md:gap-5">
                 <div className="flex-grow max-w-[330px]">
                     <EyebrowBlock
                         eyebrow="Průběh spolupráce"
@@ -21,7 +21,7 @@ export default function SectionSteps() {
                     />
                 </div>
 
-                <div className="flex-grow flex flex-col items-start gap-5 md:gap-8">
+                <div className="flex-grow flex flex-col max-sm:pl-10 items-start gap-5 md:gap-8">
                     {STEP_ITEMS.map((item, index) => (
                         <StepItemBox
                             key={`Step Item: ${index}`}
@@ -37,10 +37,10 @@ export default function SectionSteps() {
 
 function StepItemBox({ index, title, description }: StepItem & { index: number }) {
     return (
-        <article className={cn('relative max-w-[287px]', {
-            'md:ml-10': index === 1,
-            'md:self-end md:-mt-28': index === 2,
-            'md:self-center': index === 3,
+        <article className={cn('relative w-full max-w-[350px] md:max-w-[287px]', {
+            'sm:self-start md:ml-10': index === 1,
+            'sm:self-end lg:-mt-28': index === 2,
+            'sm:self-center': index === 3,
         })}>
             <div className="absolute top-4 -left-10 w-30 h-30 rounded-full bg-blue-600" />
             <div className="relative flex flex-col gap-5 p-8 pt-5 border border-blue-400/20 rounded-[25px] bg-black/20 backdrop-blur-md">

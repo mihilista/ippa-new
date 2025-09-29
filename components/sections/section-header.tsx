@@ -13,7 +13,7 @@ export default function SectionHeader() {
             as="section"
             className="relative"
         >
-            <GlowBall className="left-0 -top-16 w-[64%] aspect-square" />
+            <GlowBall className="-left-[60%] md:left-0 top-20 md:-top-16 w-[190vw] md:w-[64%] aspect-square" />
 
             <div className="relative flex flex-col md:flex-row md:items-center gap-14 md:gap-6">
                 <div className="shrink-0 w-full md:max-w-[292px] flex flex-col items-start gap-12">
