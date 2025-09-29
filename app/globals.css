@@ -59,6 +59,7 @@
 
 @theme inline {
     --spacing-nav: var(--nav-height);
+    --spacing-nav-extra: calc(var(--nav-height) + 2rem);
     --spacing-device: var(--device-height);
 }
 
@@ -91,7 +92,7 @@
     }
 
     html {
-        @apply antialiased font-sans scroll-pt-nav;
+        @apply antialiased font-sans scroll-pt-nav-extra;
         @apply selection:bg-white selection:text-black;
         -webkit-tap-highlight-color: rgba(255, 255, 255, 0.1);
     }
@@ -130,8 +131,8 @@
 
     .desktop-menu-link {
         @apply text-o1 uppercase;
-        @apply hover:underline;
-
+        @apply transition-colors duration-300;
+        @apply hover:text-blue-400;
     }
 
     .mobile-menu-link {}
@@ -168,7 +169,7 @@
     }
 
     .input-label {
-        @apply absolute top-4 left-4;
+        @apply absolute top-[13px] left-4;
         @apply text-white/70;
         @apply transition-all duration-300;
     }
