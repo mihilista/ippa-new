@@ -1,8 +1,7 @@
-import clsx from "clsx";
-import React from "react";
 import Container from "@/components/container";
 import { ContextState, useGlobalContext } from "@/context/global-context";
 import { NAV_LINKS } from "@/helpers/links";
+import clsx from "clsx";
 import Link from "next/link";
 
 export default function NavMobileMenu() {
@@ -10,9 +9,9 @@ export default function NavMobileMenu() {
 
     return (
         <div
-            className={clsx('flex lg:hidden fixed top-0 left-0 w-full h-screen bg-white/70 transition-all duration-500', {
+            className={clsx('flex lg:hidden fixed top-0 left-0 w-full h-screen bg-black transition-all duration-500', {
                 'opacity-100': burgerMenuActive,
-                'translate-x-1/2 opacity-0 pointer-events-none': !burgerMenuActive
+                '-translate-y-10 opacity-0 pointer-events-none': !burgerMenuActive
             })}
         >
             <Container className="flex-1 flex flex-col justify-center items-center gap-10">

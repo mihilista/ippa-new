@@ -26,16 +26,16 @@ export default function Nav() {
     }, [handleScroll]);
 
     return (
-        <nav className={cn('fixed top-0 left-0 w-full z-50 border-b transition-colors duration-300', {
-            'border-transparent': !scrolled && !burgerMenuActive,
-            'border-blue-400/20 backdrop-blur-sm bg-black/70': scrolled || burgerMenuActive,
+        <nav className={cn('fixed top-0 left-0 w-full z-50 border-b transition-all duration-300', {
+            'border-transparent py-7.5': !scrolled || burgerMenuActive,
+            'border-blue-400/20 backdrop-blur-sm bg-black/70 py-4': scrolled && !burgerMenuActive,
         })}>
             <Container as="div"
-                className="relative flex items-center justify-between gap-8 py-7.5"
+                className="relative flex items-center justify-between gap-8"
             >
                 <LogoLink className={cn('relative z-50 shrink-0 transition-all duration-300', {
-                    'w-[63px]': !scrolled && !burgerMenuActive,
-                    'w-[43px]': scrolled || burgerMenuActive,
+                    'w-[63px]': !scrolled || burgerMenuActive,
+                    'w-[43px]': scrolled && !burgerMenuActive,
                 })} />
 
                 <NavDesktopMenu />
