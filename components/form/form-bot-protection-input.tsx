@@ -1,6 +1,9 @@
-import { TFormBotProtectionInput } from "@/helpers/types";
+type FormBotProtectionInputProps = {
+    value: string;
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
 
-export default function FormBotProtectionInput({ value, onChange }: TFormBotProtectionInput) {
+export default function FormBotProtectionInput({ value, onChange }: FormBotProtectionInputProps) {
     return (
         <input type="text"
             name="gender"
