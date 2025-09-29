@@ -8,6 +8,7 @@ export default function SectionSteps() {
     return (
         <Container
             narrow
+            id="process"
             className="relative"
         >
             <GlowBall className="w-[90%] aspect-square top-50 left-[40%]" />

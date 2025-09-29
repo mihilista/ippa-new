@@ -6,6 +6,6 @@ type GlowBallProps = {
 
 export default function GlowBall({ className }: GlowBallProps) {
     return (
-        <div className={cn('absolute bg-radial from-blue-600 to-66% to-blue-600/0 rounded-full', className)} />
+        <div aria-hidden className={cn('absolute bg-radial from-blue-600 to-66% to-blue-600/0 rounded-full pointer-events-none select-none', className)} />
     );
 }

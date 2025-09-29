@@ -6,7 +6,8 @@ export default function SectionContact() {
     return (
         <Container
             narrow
-            className="flex items-start gap-5"
+            id="contact"
+            className="relative flex items-start gap-5 z-10"
         >
             <header className="flex-grow max-w-[327px]">
                 <EyebrowBlock

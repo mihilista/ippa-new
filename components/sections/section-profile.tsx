@@ -26,7 +26,11 @@ const PROFILE_ROWS: ProfileRow[] = [
 
 export default function SectionProfile() {
     return (
-        <Container narrow className="relative">
+        <Container
+            narrow
+            id="profile"
+            className="relative"
+        >
             <GlowBall className="w-[52%] aspect-square -top-50 -left-[10%]" />
 
             <div className="relative flex items-center gap-32">
