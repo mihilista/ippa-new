@@ -2,11 +2,6 @@
   "name": "landing-template",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "pnpm@10.8.1",
-  "engines": {
-    "node": "^18.17 || ^20 || ^22",
-    "pnpm": ">=10.8.1"
-  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
