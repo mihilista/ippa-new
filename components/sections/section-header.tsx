@@ -28,7 +28,7 @@ export default function SectionHeader() {
                     <HeaderProfile className="max-md:hidden" />
                 </div>
 
-                <div className="flex-grow max-md:-mr-8">
+                <div className="relative flex-grow max-md:-mr-8 max-md:ml-8">
                     <HeaderVideo />
                 </div>
 
