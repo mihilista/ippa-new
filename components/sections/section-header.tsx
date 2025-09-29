@@ -1,39 +1,51 @@
-import Container from "@/components/container";
-import TypoJumbo from "@/components/typo/typo-jumbo";
-import TypoBody from "@/components/typo/typo-body";
-import imagePoster from "@/public/images/poster.jpg";
-import CtaButton from "@/components/cta-button";
+import Button from '@/components/button';
+import Container from '@/components/container';
+import GlowBall from '@/components/glow-ball';
 
 export default function SectionHeader() {
     return (
-        <Container className="flex flex-col lg:flex-row gap-8 lg:gap-14">
-            <div className="flex-1 flex flex-col gap-10 py-10">
+        <Container
+            as="section"
+            className="relative flex items-center gap-6"
+        >
+            <GlowBall className="left-0 -top-16 w-[64%] aspect-square" />
+            <div className="relative flex-grow max-w-[292px] flex flex-col items-start gap-12">
                 <header>
-                    <TypoJumbo className="max-w-[21ch]">
-                        Odemkněte svůj plný potenciál!
-                    </TypoJumbo>
+                    <h1 className="font-serif text-h2 text-balance mb-2.5">
+                        Odemkněte svůj potenciál.
+                    </h1>
+                    <p className="text-b1 max-w-[20ch]">
+                        Objevte svůj potenciál – psychologické poradenství a koučink.
+                    </p>
                 </header>
-                <TypoBody className="text-gray-800 max-w-[45ch]">
-                    Dopřejte si koučink od zkušeného psychologa, který vám pomůže překonat bariéry a posunout se k naplněnému životu i kariéře. Jste připraveni na změnu?
-                    <br /><br />
-                    <strong>Pomůžeme vám znovu se nadechnout a nadchnout.</strong>
-                </TypoBody>
-                <CtaButton className="self-start" />
-            </div>
-            <div className="flex-1 relative">
-                <div className="absolute top-0 -left-[5px] md:-left-8 w-[calc(100%+10px)] md:w-full h-full rounded-[30px] bg-gray-200" />
 
-                <video className="relative w-full h-full object-cover rounded-[30px]"
-                    controls
-                    autoPlay={false}
-                    loop={false}
-                    poster={imagePoster.src}
-                    aria-label="Inspirativní video o odemknutí plného potenciálu pomocí psychologického koučinku."
-                >
-                    <source src="/videos/header.mp4" type="video/mp4" />
-                    Váš prohlížeč nepodporuje video tag. Zde je <a href="/videos/header.mp4">odkaz na video</a>.
-                </video>
+                <div className="flex items-start gap-3">
+                    <div className="w-10 h-10 shrink-0 rounded-full bg-white/10">
+
+                    </div>
+
+                    <div className="flex flex-col">
+                        <strong className="font-serif text-h4 max-w-[16ch] mt-1.5 mb-2.5">
+                            PhDr. Otakar Chaloupka
+                        </strong>
+                        <span className="text-b3">
+                            psycholog a kouč
+                        </span>
+                    </div>
+                </div>
+
+                <Button href="#contact">
+                    Rezervovat konzultaci
+                </Button>
+            </div>
+
+            <div className="relative">
+
+            </div>
+
+            <div className="relative flex-grow aspect-[795/476] rounded-[25px] bg-white/10">
+
             </div>
         </Container>
-    )
+    );
 }

@@ -1,9 +1,7 @@
 import React from "react";
 
 const PRELOAD_FONTS = [
-    '/fonts/montserrat/Montserrat-Regular.woff2',
-    '/fonts/montserrat/Montserrat-Medium.woff2',
-    '/fonts/montserrat/Montserrat-Bold.woff2',
+    '/fonts/poppins/Poppins-Regular.woff2'
 ];
 
 export default function PreloadFonts() {

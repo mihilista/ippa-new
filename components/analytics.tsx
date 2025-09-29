@@ -3,7 +3,9 @@ import Script from 'next/script';
 const GTM_CONTAINER_ID = 'GTM-KVX56XBZ';
 
 export default function Analytics() {
-    return (
+    const isProduction = process.env.NODE_ENV === 'production';
+
+    return isProduction && (
         <Script
             id="gtm-script"
             strategy="afterInteractive"

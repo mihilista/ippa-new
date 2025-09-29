@@ -1,10 +1,11 @@
-export const NAV_LINKS = [
-    { href: '/#koucink', label: 'Co je koučink?' },
-    { href: '/#ippa', label: 'IPPA' },
-    { href: '/#kontakt', label: 'Kontakt' },
-];
+export type LinkProps = {
+    label: string;
+    href: string;
+}
 
-export const FOOTER_LINKS = [
-    ...NAV_LINKS,
-    { href: '/gdpr', label: 'GDPR' },
+export const NAV_LINKS: LinkProps[] = [
+    {
+        href: '#home',
+        label: 'Domů',
+    }
 ];

@@ -1,28 +1,45 @@
-import {TButton} from "@/helpers/types";
-import Link from "next/link";
+import React from "react";
 import clsx from "clsx";
 
+type ButtonProps = {
+    theme?: 'primary' | 'secondary';
+    href?: string;
+    className?: string;
+    disabled?: boolean;
+    children?: React.ReactNode;
+    [rest: string]: unknown;
+}
+
 export default function Button({
-                                   href,
-                                   theme = 'blue',
-                                   children,
-                                   className,
-                                   ...rest
-                               }: TButton) {
-    const classes = clsx(`button button-${theme}`, className);
+    theme = 'primary',
+    href,
+    className,
+    children,
+    disabled = false,
+    ...rest
+}: ButtonProps) {
+    const classes = clsx('button', {
+        'button--primary': theme === 'primary',
+        'opacity-50 cursor-not-allowed': disabled,
+    }, className);
 
     if (href) {
         return (
-            <Link href={href} className={classes} {...rest}>
+            <a className={classes}
+                href={href}
+                {...rest}
+            >
                 {children}
-            </Link>
-        );
+            </a>
+        )
     }
 
     return (
-        <button className={classes} {...rest}>
+        <button className={classes}
+            disabled={disabled}
+            {...rest}
+        >
             {children}
         </button>
-    );
-
+    )
 }

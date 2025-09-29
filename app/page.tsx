@@ -1,17 +1,21 @@
-import SectionHeader from "@/components/sections/section-header";
-import SectionCoaching from "@/components/sections/section-coaching";
-import SectionWhyUs from "@/components/sections/section-why-us";
-import SectionClients from "@/components/sections/section-clients";
-import SectionContact from "@/components/sections/section-contact";
+import SectionContact from '@/components/sections/section-contact';
+import SectionFeatures from '@/components/sections/section-features';
+import SectionHeader from '@/components/sections/section-header';
+import SectionPeople from '@/components/sections/section-people';
+import SectionProfile from '@/components/sections/section-profile';
+import SectionResults from '@/components/sections/section-results';
+import SectionSteps from '@/components/sections/section-steps';
 
 export default function Home() {
     return (
-        <div className="flex flex-col gap-32 lg:gap-32 pt-12">
+        <>
             <SectionHeader />
-            <SectionCoaching />
-            <SectionWhyUs />
-            <SectionClients />
+            <SectionFeatures />
+            <SectionSteps />
+            <SectionResults />
+            <SectionPeople />
+            <SectionProfile />
             <SectionContact />
-        </div>
+        </>
     );
 }

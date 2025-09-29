@@ -1,28 +1,30 @@
-import React from 'react';
-import clsx from 'clsx';
-import { TContainer } from "@/helpers/types";
+import { cn } from '@/helpers/utils';
+import React, { JSX } from 'react';
+
+type ContainerProps = {
+    as?: keyof JSX.IntrinsicElements;
+    narrow?: boolean;
+    noPadding?: boolean;
+    className?: string;
+    children?: React.ReactNode;
+    [rest: string]: unknown;
+};
 
 export default function Container({
-    Element = 'section',
-    narrow = false,
+    as: Tag = 'div',
     className,
     children,
+    narrow = false,
     ...rest
-}: TContainer) {
+}: ContainerProps) {
     return (
-        <Element
-            className={clsx(
-                'mx-auto w-full px-5 md:px-6 lg:px-8',
-                className,
-                {
-                    'max-w-[1200px]': narrow,
-                    'max-w-[1440px]': !narrow,
-
-                }
-            )}
+        <Tag className={cn('w-full mx-auto px-5 md:px-10', {
+            'max-w-[1250px]': !narrow,
+            'max-w-[1100px]': narrow,
+        }, className)}
             {...rest}
         >
             {children}
-        </Element>
+        </Tag>
     );
 }

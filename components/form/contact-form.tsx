@@ -1,9 +1,9 @@
 'use client';
 
 import Button from "@/components/button";
-import Checkbox from '@/components/checkbox';
+import Checkbox from '@/components/form/checkbox';
 import FormBotProtectionInput from "@/components/form/form-bot-protection-input";
-import Input from "@/components/input";
+import Input from "@/components/form/input";
 import { validateEmail } from '@/helpers/validation';
 import clsx from "clsx";
 import Link from 'next/link';
@@ -102,7 +102,7 @@ export default function ContactForm() {
 
     return (
         <div className="w-full relative">
-            <form className={clsx('w-full flex flex-col gap-4 transition-all duration-500', {
+            <form className={clsx('w-full flex flex-col gap-5 transition-all duration-500', {
                 'opacity-0 pointer-events-none': status === 'success'
             })}
                 onSubmit={handleSubmit}
@@ -115,21 +115,23 @@ export default function ContactForm() {
                     error={errorField === 'name'}
                 />
 
-                <Input label="E-mail"
-                    id="cf-email"
-                    name="email"
-                    value={data.email}
-                    onChange={handleInputChange}
-                    error={errorField === 'email'}
-                />
+                <div className="flex flex-col md:flex-row gap-5">
+                    <Input label="E-mail"
+                        id="cf-email"
+                        name="email"
+                        value={data.email}
+                        onChange={handleInputChange}
+                        error={errorField === 'email'}
+                    />
 
-                <Input label="Telefon"
-                    id="cf-phone"
-                    name="phone"
-                    value={data.phone}
-                    onChange={handleInputChange}
-                    error={errorField === 'phone'}
-                />
+                    <Input label="Telefon"
+                        id="cf-phone"
+                        name="phone"
+                        value={data.phone}
+                        onChange={handleInputChange}
+                        error={errorField === 'phone'}
+                    />
+                </div>
 
                 <Input label="S čím vám můžeme pomoci? (volitelné)"
                     type="textarea"
@@ -154,11 +156,14 @@ export default function ContactForm() {
                     Souhlasím se <Link href="/gdpr" target="_blank" className="underline hover:no-underline">zpracováním osobních údajů</Link>.
                 </Checkbox>
 
-                <Button className={clsx('')}
-                    disabled={status === 'sending'}
-                >
-                    {status === 'sending' ? 'Odesílám...' : 'Odeslat'}
-                </Button>
+                <div className="flex flex-col-reverse md:flex-row items-center justify-between">
+                    <Button
+                        className="ml-auto w-full max-w-[270px]"
+                        disabled={status === 'sending'}
+                    >
+                        {status === 'sending' ? 'Odesílám...' : 'Odeslat'}
+                    </Button>
+                </div>
             </form>
 
             <div
