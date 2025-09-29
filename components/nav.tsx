@@ -31,9 +31,12 @@ export default function Nav() {
             'border-blue-400/20 backdrop-blur-sm bg-black/70': scrolled || burgerMenuActive,
         })}>
             <Container as="div"
-                className="relative flex items-center justify-between gap-8 transition-all duration-500 py-7.5"
+                className="relative flex items-center justify-between gap-8 py-7.5"
             >
-                <LogoLink className="relative z-50 shrink-0 w-[63px]" />
+                <LogoLink className={cn('relative z-50 shrink-0 transition-all duration-300', {
+                    'w-[63px]': !scrolled && !burgerMenuActive,
+                    'w-[43px]': scrolled || burgerMenuActive,
+                })} />
 
                 <NavDesktopMenu />
 

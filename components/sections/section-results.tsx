@@ -13,7 +13,7 @@ export default function SectionResults() {
                 />
             </header>
 
-            <div className="w-full flex justify-between gap-10">
+            <div className="w-full flex flex-col md:flex-row md:justify-between gap-24 md:gap-10">
                 {RESULT_ITEMS.map((item, index) => (
                     <ResultsItemCol
                         key={`Results Item: ${index}`}

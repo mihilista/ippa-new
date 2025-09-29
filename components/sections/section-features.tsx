@@ -5,7 +5,7 @@ import { FEATURE_ITEMS, FeatureItem } from '@/helpers/features';
 export default function SectionFeatures() {
     return (
         <Container as="section"
-            className="flex items-center gap-5"
+            className="flex flex-col md:flex-row md:items-center gap-8 md:gap-5"
         >
             <div className="flex-grow max-w-[330px]">
                 <EyebrowBlock
@@ -15,7 +15,7 @@ export default function SectionFeatures() {
                 />
             </div>
 
-            <div className="flex-grow grid grid-cols-2 gap-5">
+            <div className="flex-grow grid grid-cols-1 md:grid-cols-2 gap-5">
                 {FEATURE_ITEMS.map((item, index) => (
                     <FeatureItemBox
                         key={`Feature Item: ${index}`}

@@ -46,7 +46,7 @@ export default function RootLayout({
 
                 <GlobalProvider>
                     <Nav />
-                    <main className="flex-1 pt-nav flex flex-col gap-75 pb-75 w-screen overflow-hidden">
+                    <main className="flex-1 pt-nav flex flex-col gap-36 md:gap-75 pb-36 md:pb-75 w-screen overflow-hidden">
                         {children}
                     </main>
                     <Footer />

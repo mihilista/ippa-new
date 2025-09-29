@@ -1,5 +1,6 @@
 import Button from '@/components/button';
 import Container from '@/components/container';
+import EyebrowBlock from '@/components/eyebrow-block';
 import GlowBall from '@/components/glow-ball';
 import imageVideoThumb from '@/public/images/header-video-thumb.jpg';
 import imageProfileCircle from '@/public/images/profile-circle.png';
@@ -13,15 +14,14 @@ export default function SectionHeader() {
         >
             <GlowBall className="left-0 -top-16 w-[64%] aspect-square" />
 
-            <div className="relative flex items-center gap-6">
-                <div className="flex-grow max-w-[292px] flex flex-col items-start gap-12">
+            <div className="relative flex flex-col md:flex-row md:items-center gap-6">
+                <div className="flex-grow md:max-w-[292px] flex flex-col items-start gap-12">
                     <header>
-                        <h1 className="font-serif text-h2 text-balance mb-2.5">
-                            Odemkněte svůj potenciál.
-                        </h1>
-                        <p className="text-b1 max-w-[20ch]">
-                            Objevte svůj potenciál – psychologické poradenství a koučink.
-                        </p>
+                        <EyebrowBlock
+                            titleAs="h1"
+                            title="Odemkněte svůj potenciál."
+                            description="Objevte svůj potenciál – psychologické poradenství a koučink."
+                        />
                     </header>
 
                     <div className="flex items-start gap-3">

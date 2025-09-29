@@ -133,7 +133,7 @@ export default function ContactForm() {
                     />
                 </div>
 
-                <Input label="S čím vám můžeme pomoci? (volitelné)"
+                <Input label="Zpráva (volitelné)"
                     type="textarea"
                     id="cf-message"
                     name="message"
@@ -158,7 +158,7 @@ export default function ContactForm() {
 
                 <div className="flex flex-col-reverse md:flex-row items-center justify-between">
                     <Button
-                        className="ml-auto w-full max-w-[270px]"
+                        className="md:ml-auto w-full md:max-w-[270px]"
                         disabled={status === 'sending'}
                     >
                         {status === 'sending' ? 'Odesílám...' : 'Odeslat'}

@@ -18,7 +18,7 @@ export default function Container({
     ...rest
 }: ContainerProps) {
     return (
-        <Tag className={cn('w-full mx-auto px-5 md:px-10', {
+        <Tag className={cn('w-full mx-auto px-8 md:px-10', {
             'max-w-[1250px]': !narrow,
             'max-w-[1100px]': narrow,
         }, className)}

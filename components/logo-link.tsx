@@ -1,10 +1,10 @@
 'use client';
 
+import SvgLogo from "@/components/svg/svg-logo";
 import { cn, scrollToTop } from "@/helpers/utils";
 import Link from "next/link";
-import React from "react";
-import SvgLogo from "@/components/svg/svg-logo";
 import { usePathname } from 'next/navigation';
+import React from "react";
 
 type LogoLinkProps = {
     className?: string;
@@ -24,9 +24,9 @@ export default function LogoLink({ className }: LogoLinkProps) {
         <Link href="/"
             className={cn('inline-flex', className)}
             onClick={handleLogoClick}
-            aria-label="Jít zpět nahoru"
+            aria-label={pathname === '/' ? "Jít zpět nahoru" : "Jít na úvodní stránku"}
         >
-            <SvgLogo />
+            <SvgLogo className="w-full" />
         </Link>
     )
 }

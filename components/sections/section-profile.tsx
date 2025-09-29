@@ -33,12 +33,12 @@ export default function SectionProfile() {
         >
             <GlowBall className="w-[52%] aspect-square -top-50 -left-[10%]" />
 
-            <div className="relative flex items-center gap-32">
-                <div className="flex-grow max-w-[445px]">
+            <div className="relative flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-32">
+                <div className="flex-grow max-w-[445px] max-md:-ml-8">
                     <Image
                         src={imageOtakarChaloupka}
                         alt="PhDr. Otakar Chaloupka, CSc."
-                        className="w-full rounded-[25px]"
+                        className="w-full rounded-r-[25px] md:rounded-[25px]"
                     />
                 </div>
 
@@ -53,7 +53,7 @@ export default function SectionProfile() {
                     <p className="text-b2">
                         Psycholog, kouč a strategický partner.
                         <br /><br />
-                        Zakladatel IPPA. Praxe ve firmách i s jednotlivci. Lektor, supervizor a průvodce.
+                        Zakladatel IPPA (Institut psychologické a personální analýzy). Praxe ve firmách i s jednotlivci. Lektor, supervizor a průvodce.
                     </p>
 
                     <div className="flex flex-col gap-5 items-start">

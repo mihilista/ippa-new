@@ -13,7 +13,7 @@ export default function SectionPeople() {
     return (
         <Container
             narrow
-            className="flex items-start gap-17"
+            className="flex flex-col md:flex-row items-start gap-17"
         >
             <header className="flex-grow max-w-[397px]">
                 <EyebrowBlock
@@ -29,7 +29,7 @@ export default function SectionPeople() {
                             key={`People Item: ${index}`}
                             className="flex items-start gap-10 text-b2"
                         >
-                            <SvgArrowRight className="w-8" />
+                            <SvgArrowRight className="shrink-0 w-8" />
                             <div className="max-w-[32ch] text-balance">
                                 {item}
                             </div>

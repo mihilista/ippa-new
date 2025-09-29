@@ -19,7 +19,7 @@ export default function Footer() {
                     <div className="w-full flex flex-col items-center gap-14">
                         <LogoLink className="w-[143px]" />
 
-                        <p className="text-b2 text-center">
+                        <p className="text-b2 text-center max-md:max-w-[20ch] text-balance">
                             <strong>
                                 Institut psychologické a personální analýzy
                             </strong>
@@ -27,7 +27,7 @@ export default function Footer() {
                             Váš partner pro osobnÍ a profesní růst od roku 1993
                         </p>
 
-                        <div className="w-full max-w-[712px] flex items-center text-center">
+                        <div className="w-full max-w-[712px] flex flex-col md:flex-row items-center text-center max-md:gap-14">
                             <div className="flex-1">
                                 <a href={CONTACT_EMAIL_LINK} className="inline-flex items-center hover:text-blue-400 transition-colors duration-300">
                                     <SvgEmail className="w-6 mr-2 text-blue-400" />

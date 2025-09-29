@@ -123,7 +123,7 @@
     /* Navigation */
     .burger-menu-line {
         @apply absolute left-1/2;
-        @apply w-full h-0.5 bg-black;
+        @apply w-full h-0.5 bg-white;
         @apply -translate-x-1/2;
         @apply transition-all duration-500;
         @apply will-change-transform;
@@ -139,16 +139,22 @@
 
     /* Buttons */
     .button {
-        @apply border border-blue-400/20 rounded-none;
-        @apply inline-flex items-center justify-center;
+        @apply border border-blue-400/20;
+        @apply inline-flex items-center justify-center text-center;
         @apply py-3 px-4 rounded-[12px];
         @apply text-button;
         @apply transition-all duration-300;
-        box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.56);
     }
 
     .button--primary {
         @apply bg-white text-black;
+        box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.56);
+    }
+
+    .button--secondary {
+        @apply bg-transparent text-white;
+        box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
+
     }
 
     /* Inputs */
