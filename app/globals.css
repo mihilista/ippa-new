@@ -136,7 +136,7 @@
     /* Navigation */
     .burger-menu-line {
         @apply absolute left-1/2;
-        @apply w-full h-0.5 bg-white;
+        @apply w-full h-[3px] bg-white;
         @apply -translate-x-1/2;
         @apply transition-all duration-500;
         @apply will-change-transform;
@@ -148,7 +148,25 @@
         @apply hover:text-blue-400;
     }
 
-    .mobile-menu-link {}
+    .mobile-menu-link {
+        @apply text-o1 uppercase;
+        @apply inline-flex items-center gap-12;
+        @apply -translate-y-5 opacity-0;
+        @apply transition-all duration-300;
+    }
+
+    .mobile-menu-link:after {
+        content: '';
+        @apply w-16 h-[3px] bg-white;
+    }
+
+    .mobile-menu-link.active {
+        @apply translate-y-0 opacity-100;
+    }
+
+    .mobile-menu-link:not(.active) {
+        @apply !delay-0;
+    }
 
     /* Buttons */
     .button {
