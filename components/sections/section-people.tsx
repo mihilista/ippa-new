@@ -17,8 +17,8 @@ export default function SectionPeople() {
         >
             <header className="flex-grow max-w-[397px]">
                 <EyebrowBlock
-                    eyebrow="Výsledky"
-                    title="Pro koho je spolupráce vhodná"
+                    eyebrow="Klienti"
+                    title="Pro koho je spolupráce vhodná?"
                 />
             </header>
 

@@ -21,7 +21,7 @@ export default function SectionHeader() {
                         <EyebrowBlock
                             titleAs="h1"
                             title="Odemkněte svůj potenciál."
-                            description="Objevte svůj potenciál – psychologické poradenství a koučink."
+                            description="Psychologické poradenství a koučink pro váš osobní a profesní růst."
                         />
                     </header>
 

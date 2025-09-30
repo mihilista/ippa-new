@@ -7,9 +7,9 @@ export const CONTACT_EMAIL_LINK = `mailto:${CONTACT_EMAIL}`;
 export const CONTACT_PHONE_LINK = `tel:${CONTACT_PHONE.replace(/\s/g, '')}`;
 
 export const CONTACT_ADDRESS = {
-    street: 'Národní 100/10',
+    street: 'Čertouská 353/8',
     city: 'Praha',
-    zip: '110 00',
+    zip: '198 00',
     country: 'Česká republika',
 };
 

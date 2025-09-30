@@ -172,7 +172,7 @@
 
     /* Inputs */
     .input {
-        @apply rounded-[12px] outline-0 bg-transparent w-full border border-blue-400;
+        @apply rounded-[12px] outline-0 bg-black/20 backdrop-blur w-full border border-blue-400;
         @apply flex px-2.5 py-3.5;
         @apply text-white text-b2;
         @apply focus:border-white;
@@ -188,7 +188,7 @@
     }
 
     .input-label {
-        @apply absolute top-3 left-3;
+        @apply absolute top-3 left-3 z-10;
         @apply text-white/70;
         @apply transition-all duration-300;
     }

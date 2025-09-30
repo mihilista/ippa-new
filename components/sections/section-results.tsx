@@ -5,7 +5,11 @@ import { RESULT_ITEMS, ResultItem } from '@/helpers/results';
 
 export default function SectionResults() {
     return (
-        <Container narrow className="relative">
+        <Container
+            narrow
+            // compensating for optical space above it
+            className="relative md:-mt-25"
+        >
             <GlowBall className="md:hidden left-0 top-260 w-[190vw] aspect-square" />
 
             <div className="relative">

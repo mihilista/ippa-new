@@ -10,12 +10,12 @@ export const APP_NAME = 'IPPA';
 export const APP_URL = 'https://koucink.ippa.cz';
 export const APP_COLOR = '#101010';
 
-const TITLE_SUFFIX = APP_NAME;
-const DESCRIPTION = '';
+const TITLE_SUFFIX = 'IPPA - Institut psychologické a personální analýzy';
+const DESCRIPTION = 'Dopřejte si koučink od zkušeného psychologa, který vám pomůže překonat bariéry a posunout se k naplněnému životu i kariéře. Jste připraveni na změnu?';
 
 export const DEFAULT_METADATA: Metadata = {
     metadataBase: new URL(APP_URL),
-    title: formatTitle(APP_NAME),
+    title: formatTitle(TITLE_SUFFIX),
     description: DESCRIPTION,
     applicationName: APP_NAME,
     manifest: "/site.webmanifest",
@@ -29,7 +29,7 @@ export const DEFAULT_METADATA: Metadata = {
         apple: "/apple-touch-icon.png",
     },
     openGraph: {
-        title: formatTitle(APP_NAME),
+        title: formatTitle(TITLE_SUFFIX),
         siteName: APP_NAME,
         url: APP_URL,
         description: DESCRIPTION,
@@ -40,7 +40,7 @@ export const DEFAULT_METADATA: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: formatTitle(APP_NAME),
+        title: formatTitle(TITLE_SUFFIX),
         description: DESCRIPTION,
         images: [`${APP_URL}/images/og-image.jpg`],
     },
