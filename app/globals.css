@@ -250,11 +250,11 @@
     }
 
     .legal-page h1 {
-        @apply text-h3 md:text-h2 font-bold text-center;
+        @apply font-serif text-h3 md:text-h2 font-bold text-center;
     }
 
     .legal-page h2 {
-        @apply text-h4 md:text-h3 font-bold text-blue-400;
+        @apply font-serif text-h4 md:text-h3 font-bold text-blue-400;
     }
 
     .legal-page section {
