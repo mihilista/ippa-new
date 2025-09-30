@@ -5,7 +5,7 @@ import LogoLink from '@/components/logo-link';
 import MadeByAristoclick from '@/components/made-by-aristoclick';
 import SvgEmail from '@/components/svg/svg-email';
 import SvgPhone from '@/components/svg/svg-phone';
-import { CONTACT_EMAIL, CONTACT_EMAIL_LINK, CONTACT_PHONE, CONTACT_PHONE_LINK } from '@/helpers/contacts';
+import { CONTACT_ADDRESS, CONTACT_ADDRESS_LINK, CONTACT_EMAIL, CONTACT_EMAIL_LINK, CONTACT_PHONE, CONTACT_PHONE_LINK } from '@/helpers/contacts';
 
 export default function Footer() {
 
@@ -25,6 +25,12 @@ export default function Footer() {
                             </strong>
                             <br /><br />
                             Váš partner pro osobnÍ a profesní růst od roku 1993
+                            <br /><br />
+                            <a href={CONTACT_ADDRESS_LINK} target="_blank" rel="noopener noreferrer"
+                                className="hover:text-blue-400 transition-colors duration-300"
+                            >
+                                {CONTACT_ADDRESS.city} - {CONTACT_ADDRESS.street}
+                            </a>
                         </p>
 
                         <div className="w-full max-w-[712px] flex flex-col md:flex-row items-center text-center max-md:gap-14">

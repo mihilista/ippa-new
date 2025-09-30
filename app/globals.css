@@ -225,4 +225,30 @@
         max-height: 1000px;
         transition: max-height 1s ease-in-out;
     }
+
+    /* Legal Pages */
+    .legal-page {
+        @apply relative flex flex-col gap-10 z-10;
+    }
+
+    .legal-page h1 {
+        @apply text-h3 md:text-h2 font-bold text-center;
+    }
+
+    .legal-page h2 {
+        @apply text-h4 md:text-h3 font-bold text-blue-400;
+    }
+
+    .legal-page section {
+        @apply w-full max-w-[900px] mx-auto;
+        @apply flex flex-col gap-5;
+    }
+
+    .legal-page ul {
+        @apply list-disc list-inside;
+    }
+
+    .legal-page section a {
+        @apply underline text-blue-400 hover:no-underline;
+    }
 }

@@ -13,7 +13,7 @@ export const CONTACT_ADDRESS = {
     country: 'Česká republika',
 };
 
-export const CONTACT_ADDRESS_LINK = '';
+export const CONTACT_ADDRESS_LINK = 'https://maps.app.goo.gl/8xjYdXgqhobCYKb79';
 
 export const VAT_ID = '';
 
