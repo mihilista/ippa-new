@@ -4,7 +4,7 @@ import { CONTACT_EMAIL, CONTACT_EMAIL_LINK, CONTACT_PHONE, CONTACT_PHONE_LINK } 
 export default function GDPRPage() {
     return (
         <Container
-            Element="article"
+            as="article"
             className="legal-page pt-12"
         >
             <header>
