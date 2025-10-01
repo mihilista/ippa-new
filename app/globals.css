@@ -58,6 +58,8 @@
 
     --shadow-glow: 0px 0px 20px var(--tw-shadow-color);
     --shadow-glow-large: 0px 0px 30px var(--tw-shadow-color);
+
+    --text-shadow-glow: 0px 0px 10px rgba(255, 255, 255, 0.7);
 }
 
 @theme inline {
@@ -170,6 +172,7 @@
 
     /* Buttons */
     .button {
+        @apply relative overflow-hidden;
         @apply border border-blue-400/20;
         @apply inline-flex items-center justify-center text-center;
         @apply py-3 px-4 rounded-[12px];
@@ -179,12 +182,13 @@
 
     .button--primary {
         @apply bg-white text-black;
-        /* box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.56); */
+        @apply hover:bg-transparent hover:text-white hover:border-white;
         @apply shadow-glow shadow-white/56 hover:shadow-glow-large hover:shadow-blue-400/80;
     }
 
     .button--secondary {
-        @apply bg-transparent text-white;
+        @apply bg-transparent text-white text-shadow-white;
+        @apply hover:text-shadow-glow hover:border-blue-400;
         @apply shadow-glow shadow-white/10 hover:shadow-glow-large hover:shadow-blue-400/30;
     }
 
