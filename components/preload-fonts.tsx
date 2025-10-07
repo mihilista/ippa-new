@@ -1,5 +1,6 @@
 
 const PRELOAD_FONTS = [
+    '/fonts/inter/Inter_18pt-Regular.woff2',
     '/fonts/gloock/Gloock-Regular.woff2'
 ];
 
