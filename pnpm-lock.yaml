@@ -12,8 +12,8 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0
       '@mihilista/cookie-consent':
-        specifier: ^2.0.2
-        version: 2.0.2(next@15.3.6(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+        specifier: ^2.0.3
+        version: 2.0.3(next@15.3.6(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@sendgrid/mail':
         specifier: ^8.1.6
         version: 8.1.6
@@ -291,8 +291,8 @@ packages:
   '@mihilista/aristoclick-logo@1.0.0':
     resolution: {integrity: sha512-vQfVItQzFw9nzVzrM9RcSiUC5ipJKtpBAApzBqsl0nqKzIia+p14Ib4o7pxpdFk2ca5NqBWv50uF1vJ0o5GkxA==}
 
-  '@mihilista/cookie-consent@2.0.2':
-    resolution: {integrity: sha512-cztmY3L9weEou7Mb94pwRlqmzY4QTXX/9YccO/J6O7/YkC851QKul536i2LZoppTVi93s2fs6zdfhYcjwclmbw==}
+  '@mihilista/cookie-consent@2.0.3':
+    resolution: {integrity: sha512-fwGkl6dEmhhJO8PE1+2SQajrdQJKrkwv/+P2uZscmlpxB3CSFib3MjuzZrW0RspKwPQZE6uh6bFHX6PXE/6JzQ==}
     peerDependencies:
       react: '>=18.2.0'
       react-dom: '>=18.2.0'
@@ -2256,7 +2256,7 @@ snapshots:
 
   '@mihilista/aristoclick-logo@1.0.0': {}
 
-  '@mihilista/cookie-consent@2.0.2(next@15.3.6(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+  '@mihilista/cookie-consent@2.0.3(next@15.3.6(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
       cookies-next: 5.1.0(next@15.3.6(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react@19.1.1)
       react: 19.1.1
