@@ -19,7 +19,6 @@ export const DEFAULT_METADATA: Metadata = {
     description: DESCRIPTION,
     applicationName: APP_NAME,
     manifest: "/site.webmanifest",
-    themeColor: APP_COLOR,
     icons: {
         icon: [
             { url: "/favicon.svg", type: "image/svg+xml" },

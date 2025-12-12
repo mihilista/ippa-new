@@ -6,6 +6,12 @@ import { GlobalProvider } from "@/context/global-context";
 import { CONTACT_ADDRESS, CONTACT_EMAIL, CONTACT_PHONE } from '@/helpers/contacts';
 import { APP_COLOR, APP_NAME, APP_URL, DEFAULT_METADATA } from '@/helpers/metadata';
 import { aristoclick } from '@mihilista/aristoclick-logo';
+import {
+    ConsentInitScript,
+    CookieBanner,
+    CookieConsentProvider,
+    CookiePreferencesModal
+} from '@mihilista/cookie-consent';
 import type { Metadata, Viewport } from "next";
 import React from "react";
 import "./globals.css";
@@ -119,17 +125,23 @@ export default function RootLayout({
                         })
                     }}
                 />
+                <ConsentInitScript />
             </head>
             <body className="min-h-device flex flex-col">
                 <Analytics />
 
-                <GlobalProvider>
-                    <Nav />
-                    <main className="flex-1 pt-nav flex flex-col gap-36 md:gap-75 pb-36 md:pb-75 w-screen overflow-hidden">
-                        {children}
-                    </main>
-                    <Footer />
-                </GlobalProvider>
+                <CookieConsentProvider>
+                    <CookieBanner />
+                    <CookiePreferencesModal />
+
+                    <GlobalProvider>
+                        <Nav />
+                        <main className="flex-1 pt-nav flex flex-col gap-36 md:gap-75 pb-36 md:pb-75 w-screen overflow-hidden">
+                            {children}
+                        </main>
+                        <Footer />
+                    </GlobalProvider>
+                </CookieConsentProvider>
             </body>
         </html>
     );
